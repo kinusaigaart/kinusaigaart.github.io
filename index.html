@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kinusaiga Art | Creative Handmade Art & Customized Gifts</title>
-
-    <meta name="description"
-          content="Beautiful, innovative and affordable Kinusaiga art for gifting, home décor and customized orders.">
+    <title>Kinusaiga Art</title>
 
     <style>
         * {
@@ -23,40 +20,37 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background: #fffaf6;
             color: #333;
-            background: #fffaf5;
-            line-height: 1.6;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
+            width: 100%;
             background: #ffffff;
-            padding: 15px 6%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 12px 6%;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .logo-area {
+        .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
         }
 
-        .logo-area img {
-            height: 65px;
+        .logo img {
+            height: 70px;
             width: auto;
+            display: block;
             object-fit: contain;
-        }
-
-        .brand-name {
-            font-size: 24px;
-            font-weight: bold;
-            color: #8b3a3a;
         }
 
         nav {
@@ -66,322 +60,223 @@
 
         nav a {
             text-decoration: none;
-            color: #444;
+            color: #5b2929;
+            font-size: 16px;
             font-weight: 600;
-            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #b45f4d;
+            color: #b65c4a;
         }
 
-        /* HERO */
-        .hero {
-            min-height: 600px;
+
+        /* =========================
+           HOME / HERO
+        ========================= */
+
+        .home {
+            min-height: 650px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 80px 20px;
+            padding: 70px 20px;
+
             background:
-                linear-gradient(rgba(255,250,245,0.88), rgba(255,250,245,0.88)),
-                url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1800&q=80');
-            background-size: cover;
-            background-position: center;
+                linear-gradient(
+                    rgba(255,250,246,0.88),
+                    rgba(255,250,246,0.88)
+                );
         }
 
-        .hero-content {
-            max-width: 850px;
+        .home-content {
+            max-width: 900px;
         }
 
-        .hero h1 {
-            font-size: 56px;
-            color: #7f3030;
-            margin-bottom: 20px;
-            line-height: 1.15;
+        .home-logo {
+            margin-bottom: 25px;
         }
 
-        .hero h2 {
-            font-size: 28px;
-            color: #a65d48;
-            margin-bottom: 20px;
+        .home-logo img {
+            width: 240px;
+            max-width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .home h1 {
+            font-size: 52px;
+            color: #7d3030;
+            margin-bottom: 15px;
+        }
+
+        .home h2 {
+            font-size: 25px;
+            color: #a45845;
             font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        .hero p {
+        .home p {
             font-size: 19px;
+            line-height: 1.8;
             max-width: 700px;
             margin: auto;
             color: #555;
         }
 
-        .button-group {
-            margin-top: 32px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+        .buttons {
+            margin-top: 30px;
         }
 
-        .btn {
+        .button {
             display: inline-block;
             padding: 14px 28px;
+            margin: 6px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
         }
 
-        .btn-primary {
-            background: #8b3a3a;
+        .primary {
+            background: #7d3030;
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #6f2929;
-            transform: translateY(-2px);
+        .primary:hover {
+            background: #5e2020;
         }
 
-        .btn-secondary {
+        .secondary {
+            border: 2px solid #7d3030;
+            color: #7d3030;
             background: white;
-            color: #8b3a3a;
-            border: 2px solid #8b3a3a;
         }
 
-        .btn-secondary:hover {
-            background: #8b3a3a;
+        .secondary:hover {
+            background: #7d3030;
             color: white;
         }
 
-        /* GENERAL SECTIONS */
-        section {
-            padding: 80px 7%;
-        }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        /* =========================
+           BRAND STORY
+        ========================= */
 
-        .section-title h2 {
-            font-size: 38px;
-            color: #7f3030;
-            margin-bottom: 12px;
-        }
-
-        .section-title p {
-            color: #666;
-            max-width: 700px;
-            margin: auto;
-            font-size: 17px;
-        }
-
-        /* BRAND STORY */
         .story {
-            background: #ffffff;
-        }
-
-        .story-content {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .story-content p {
-            font-size: 18px;
-            margin-bottom: 18px;
-            color: #555;
-        }
-
-        /* FEATURES */
-        .features {
-            background: #fff4eb;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .feature-card {
             background: white;
-            padding: 35px 25px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            transition: 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .feature-icon {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            color: #8b3a3a;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .feature-card p {
-            color: #666;
-        }
-
-        /* PRODUCTS */
-        .products {
-            background: #ffffff;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .product-card {
-            background: #fffaf5;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-image {
-            height: 230px;
-            background: #eadbd1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            font-size: 16px;
-        }
-
-        .product-info {
-            padding: 22px;
+            padding: 80px 8%;
             text-align: center;
         }
 
-        .product-info h3 {
-            color: #8b3a3a;
-            margin-bottom: 8px;
-            font-size: 21px;
-        }
-
-        .product-info p {
-            color: #666;
-        }
-
-        /* CUSTOM ORDERS */
-        .custom {
-            background: #f7e8dc;
-            text-align: center;
-        }
-
-        .custom-content {
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .custom-content h2 {
-            font-size: 40px;
-            color: #7f3030;
-            margin-bottom: 20px;
-        }
-
-        .custom-content p {
-            font-size: 18px;
-            color: #555;
+        .story h2 {
+            font-size: 38px;
+            color: #7d3030;
             margin-bottom: 25px;
         }
 
-        /* WHY US */
-        .why-us {
-            background: #ffffff;
-        }
-
-        .why-list {
+        .story p {
             max-width: 850px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
+            margin: 12px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
         }
 
-        .why-item {
-            background: #fff7f1;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 17px;
-        }
 
-        .why-item strong {
-            color: #8b3a3a;
-        }
+        /* =========================
+           FEATURES
+        ========================= */
 
-        /* CONTACT */
-        .contact {
-            background: #7f3030;
-            color: white;
+        .features {
+            padding: 80px 7%;
+            background: #fff1e7;
             text-align: center;
         }
 
+        .features h2 {
+            font-size: 38px;
+            color: #7d3030;
+            margin-bottom: 45px;
+        }
+
+        .feature-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .feature h3 {
+            color: #8b3a3a;
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            color: #666;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+            background: #7d3030;
+            color: white;
+        }
+
         .contact h2 {
-            font-size: 40px;
+            font-size: 38px;
             margin-bottom: 15px;
         }
 
         .contact p {
-            max-width: 650px;
-            margin: 0 auto 25px;
             font-size: 18px;
+            margin-bottom: 25px;
         }
 
         .whatsapp {
             display: inline-block;
             background: #25D366;
             color: white;
-            padding: 15px 30px;
+            padding: 14px 28px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 17px;
-            transition: 0.3s;
         }
 
-        .whatsapp:hover {
-            transform: scale(1.04);
-        }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
-            background: #4d2020;
+            background: #4b1f1f;
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 25px;
         }
 
-        footer p {
-            margin: 5px 0;
-        }
 
-        /* MOBILE */
-        @media (max-width: 850px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
 
             header {
-                padding: 12px 20px;
                 flex-direction: column;
                 gap: 12px;
             }
@@ -392,70 +287,35 @@
                 justify-content: center;
             }
 
-            .hero {
-                min-height: 520px;
-            }
-
-            .hero h1 {
+            .home h1 {
                 font-size: 40px;
             }
 
-            .hero h2 {
-                font-size: 23px;
+            .home h2 {
+                font-size: 21px;
             }
 
-            .hero p {
-                font-size: 17px;
-            }
-
-            .feature-grid,
-            .product-grid {
+            .feature-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .why-list {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 60px 20px;
-            }
-
-            .section-title h2 {
-                font-size: 32px;
             }
         }
 
         @media (max-width: 500px) {
 
-            .brand-name {
-                font-size: 20px;
+            .logo img {
+                height: 55px;
             }
 
-            .logo-area img {
-                height: 50px;
+            .home-logo img {
+                width: 190px;
             }
 
-            nav {
-                font-size: 14px;
-                gap: 10px;
-            }
-
-            .hero h1 {
+            .home h1 {
                 font-size: 34px;
             }
 
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            .button-group {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 220px;
+            .home p {
+                font-size: 16px;
             }
         }
     </style>
@@ -463,59 +323,64 @@
 
 <body>
 
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <header>
 
-        <div class="logo-area">
+        <div class="logo">
 
-            <!--
-            IMPORTANT:
-            Replace "logo.png" with the exact filename of your uploaded logo
-            if your logo has a different filename.
-            -->
-
-            <img src="logo.png" alt="Kinusaiga Art Logo">
-
-            <div class="brand-name">
-                Kinusaiga Art
-            </div>
+            <!-- YOUR UPLOADED LOGO -->
+            <img src="logo/logo.png" alt="Kinusaiga Art Logo">
 
         </div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#story">Our Story</a>
-            <a href="#products">Our Art</a>
-            <a href="#custom">Custom Orders</a>
+            <a href="#features">Our Art</a>
             <a href="#contact">Contact</a>
         </nav>
 
     </header>
 
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <!-- =========================
+         HOME PAGE
+    ========================= -->
 
-        <div class="hero-content">
+    <section class="home" id="home">
 
-            <h1>Art Without Limits</h1>
+        <div class="home-content">
 
-            <h2>Beautiful Kinusaiga Art • Thoughtfully Made • Affordably Priced</h2>
+            <!-- YOUR UPLOADED LOGO -->
+            <div class="home-logo">
+                <img src="logo/logo.png" alt="Kinusaiga Art">
+            </div>
+
+            <h1>Beautiful Art, Made Affordable</h1>
+
+            <h2>
+                Creative • Handmade • Unique
+            </h2>
 
             <p>
-                Discover unique handmade Kinusaiga art created with creativity,
-                patience and attention to detail. Perfect for gifting, home décor
-                and special occasions.
+                Discover beautiful Kinusaiga art created with creativity,
+                patience and attention to detail. We create innovative,
+                attractive and cost-effective artworks for gifting,
+                home décor and special occasions.
             </p>
 
-            <div class="button-group">
+            <div class="buttons">
 
-                <a href="#products" class="btn btn-primary">
+                <a href="#features" class="button primary">
                     Explore Our Art
                 </a>
 
-                <a href="#custom" class="btn btn-secondary">
-                    Customize Your Order
+                <a href="#contact" class="button secondary">
+                    Custom Orders
                 </a>
 
             </div>
@@ -525,94 +390,74 @@
     </section>
 
 
-    <!-- BRAND STORY -->
+    <!-- =========================
+         OUR STORY
+    ========================= -->
+
     <section class="story" id="story">
 
-        <div class="section-title">
-            <h2>Our Brand Story</h2>
-            <p>Creativity, craftsmanship and affordability come together.</p>
-        </div>
+        <h2>Our Brand Story</h2>
 
-        <div class="story-content">
+        <p>
+            Kinusaiga Art was created with a simple idea —
+            beautiful art should be creative, meaningful and affordable.
+        </p>
 
-            <p>
-                Kinusaiga Art was created with a simple idea — beautiful art
-                should be innovative, meaningful and affordable.
-            </p>
+        <p>
+            We transform fabric, colours and imagination into
+            unique handmade artworks that add warmth and character
+            to every space.
+        </p>
 
-            <p>
-                We transform fabric, colours and creativity into unique
-                handmade artworks that bring warmth and character to every space.
-            </p>
-
-            <p>
-                Whether you are looking for a thoughtful gift, a beautiful
-                wall decoration or a customized artwork, we create every piece
-                with care.
-            </p>
-
-            <p>
-                Our goal is to make Kinusaiga art accessible to everyone while
-                keeping every creation special and personal.
-            </p>
-
-        </div>
+        <p>
+            We also customize artworks according to your requirements,
+            making each creation personal and special.
+        </p>
 
     </section>
 
 
-    <!-- FEATURES -->
-    <section class="features">
+    <!-- =========================
+         OUR ART
+    ========================= -->
 
-        <div class="section-title">
+    <section class="features" id="features">
 
-            <h2>Why Choose Our Kinusaiga Art?</h2>
-
-            <p>
-                Handmade creations designed to be beautiful, meaningful and affordable.
-            </p>
-
-        </div>
+        <h2>Why Choose Our Kinusaiga Art?</h2>
 
         <div class="feature-grid">
 
-            <div class="feature-card">
+            <div class="feature">
 
-                <div class="feature-icon">🎨</div>
-
-                <h3>Unique & Creative</h3>
+                <h3>🎨 Unique & Creative</h3>
 
                 <p>
-                    Every artwork is designed with creativity and attention
-                    to detail.
+                    Every artwork is carefully designed to be
+                    attractive and distinctive.
                 </p>
 
             </div>
 
 
-            <div class="feature-card">
+            <div class="feature">
 
-                <div class="feature-icon">🎁</div>
-
-                <h3>Perfect for Gifting</h3>
+                <h3>🎁 Perfect for Gifting</h3>
 
                 <p>
-                    A thoughtful handmade gift for birthdays, celebrations,
-                    festivals and special occasions.
+                    A thoughtful handmade option for birthdays,
+                    celebrations and special occasions.
                 </p>
 
             </div>
 
 
-            <div class="feature-card">
+            <div class="feature">
 
-                <div class="feature-icon">💝</div>
-
-                <h3>Affordable Art</h3>
+                <h3>💝 Affordable</h3>
 
                 <p>
-                    Beautiful Kinusaiga artwork at prices designed to make
-                    handmade art accessible.
+                    We believe beautiful handmade art should
+                    be accessible and cost effective.
                 </p>
 
             </div>
@@ -622,194 +467,37 @@
     </section>
 
 
-    <!-- PRODUCTS -->
-    <section class="products" id="products">
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
-        <div class="section-title">
-
-            <h2>Our Art Collection</h2>
-
-            <p>
-                Explore our handmade designs and discover something special.
-            </p>
-
-        </div>
-
-        <div class="product-grid">
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    Your artwork image
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Nature Collection</h3>
-
-                    <p>
-                        Beautiful nature-inspired Kinusaiga creations.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    Your artwork image
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Animal Collection</h3>
-
-                    <p>
-                        Charming handmade animal designs created with fabric art.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    Your artwork image
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Gift Collection</h3>
-
-                    <p>
-                        Special artworks created for memorable occasions.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CUSTOM ORDERS -->
-    <section class="custom" id="custom">
-
-        <div class="custom-content">
-
-            <h2>Want Something Special?</h2>
-
-            <p>
-                We provide customized Kinusaiga art according to your
-                requirements. Choose your preferred design, theme, colours
-                and size, and we will create a unique artwork especially for you.
-            </p>
-
-            <a
-                class="whatsapp"
-                href="https://wa.me/919999999999"
-                target="_blank">
-                💬 Discuss Your Custom Order
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- WHY US -->
-    <section class="why-us">
-
-        <div class="section-title">
-
-            <h2>Made With Care</h2>
-
-            <p>
-                Every piece represents time, patience and creativity.
-            </p>
-
-        </div>
-
-        <div class="why-list">
-
-            <div class="why-item">
-                <strong>✓ Handmade:</strong>
-                Each artwork is carefully created by hand.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Customizable:</strong>
-                Designs can be adapted to your requirements.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Gift Friendly:</strong>
-                A unique alternative to ordinary gifts.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Home Décor:</strong>
-                Add a creative handmade touch to your space.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Affordable:</strong>
-                We focus on making beautiful art cost effective.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Made With Love:</strong>
-                Every artwork receives individual attention.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
     <section class="contact" id="contact">
 
         <h2>Let's Create Something Beautiful</h2>
 
         <p>
-            Have a design in mind? Looking for a special gift?
-            Contact us and let us create a Kinusaiga artwork for you.
+            Looking for a special design or a customized Kinusaiga artwork?
+            Get in touch with us.
         </p>
-
-        <!--
-        IMPORTANT:
-        Replace 919999999999 with your actual WhatsApp number.
-        Format: country code + number, without + or spaces.
-        Example for India:
-        919876543210
-        -->
 
         <a
             class="whatsapp"
             href="https://wa.me/919999999999"
             target="_blank">
-            💬 Chat With Us on WhatsApp
+            WhatsApp Us
         </a>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
         <p>
             © 2026 Kinusaiga Art. All Rights Reserved.
-        </p>
-
-        <p>
-            Handmade • Creative • Affordable
         </p>
 
     </footer>
