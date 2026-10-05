@@ -26,10 +26,11 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #FFFDF8;
-            color: #403642;
+            background: #FCFAF5;
+            color: #303A34;
             line-height: 1.6;
         }
+
 
         /* =========================
            HEADER
@@ -41,7 +42,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(90, 61, 92, 0.12);
+            box-shadow: 0 2px 12px rgba(48, 58, 52, 0.10);
         }
 
         .navbar {
@@ -74,15 +75,16 @@
 
         nav a {
             text-decoration: none;
-            color: #5A3D5C;
+            color: #303A34;
             font-size: 16px;
             font-weight: 600;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #B58AB8;
+            color: #C9785A;
         }
+
 
         /* =========================
            HOME
@@ -90,7 +92,7 @@
 
         #home {
             min-height: 720px;
-            padding: 60px 20px 80px;
+            padding: 55px 20px 80px;
 
             display: flex;
             align-items: center;
@@ -101,15 +103,15 @@
             background:
                 radial-gradient(
                     circle at top left,
-                    #E8DDF2 0%,
-                    transparent 36%
+                    #EEF3EE 0%,
+                    transparent 38%
                 ),
                 radial-gradient(
                     circle at bottom right,
-                    #F5EFF8 0%,
+                    #F5E6DE 0%,
                     transparent 38%
                 ),
-                #FFFDF8;
+                #FCFAF5;
         }
 
         .hero {
@@ -119,38 +121,58 @@
         }
 
         .home-logo {
-            margin-bottom: 35px;
+            margin-bottom: 20px;
         }
 
         .home-logo img {
-            width: 460px;
+            width: 430px;
             max-width: 90%;
             height: auto;
-            max-height: 360px;
+            max-height: 330px;
             object-fit: contain;
             display: inline-block;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            color: #5A3D5C;
-            margin-bottom: 15px;
+
+        /* MAIN BRAND NAME */
+
+        .brand-name {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #718B78;
+            margin-bottom: 8px;
             line-height: 1.15;
+            text-transform: uppercase;
         }
 
-        .hero h2 {
-            font-size: 22px;
-            color: #B58AB8;
+        .brand-tagline {
+            font-size: 21px;
+            color: #C9785A;
             font-weight: 600;
-            margin-bottom: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+        }
+
+
+        /* MAIN HEADING */
+
+        .hero h1 {
+            font-size: 44px;
+            color: #303A34;
+            margin-bottom: 16px;
+            line-height: 1.15;
         }
 
         .hero p {
             max-width: 760px;
             margin: 0 auto 30px;
             font-size: 18px;
-            color: #625765;
+            color: #59635D;
         }
+
+
+        /* BUTTONS */
 
         .buttons {
             display: flex;
@@ -169,26 +191,27 @@
         }
 
         .btn-primary {
-            background: #5A3D5C;
+            background: #718B78;
             color: #FFFFFF;
         }
 
         .btn-primary:hover {
-            background: #432C45;
+            background: #596F60;
             transform: translateY(-2px);
         }
 
         .btn-secondary {
             background: #FFFFFF;
-            color: #5A3D5C;
-            border: 2px solid #B58AB8;
+            color: #718B78;
+            border: 2px solid #718B78;
         }
 
         .btn-secondary:hover {
-            background: #E8DDF2;
-            color: #5A3D5C;
+            background: #718B78;
+            color: #FFFFFF;
             transform: translateY(-2px);
         }
+
 
         /* =========================
            GENERAL
@@ -206,7 +229,7 @@
         .section-title {
             text-align: center;
             font-size: 36px;
-            color: #5A3D5C;
+            color: #303A34;
             margin-bottom: 20px;
         }
 
@@ -214,9 +237,10 @@
             text-align: center;
             max-width: 750px;
             margin: 0 auto 45px;
-            color: #6F6470;
+            color: #68716B;
             font-size: 17px;
         }
+
 
         /* =========================
            GALLERY
@@ -234,12 +258,12 @@
         }
 
         .gallery-card {
-            background: #FFFDF8;
+            background: #FCFAF5;
             border-radius: 18px;
             overflow: hidden;
 
             box-shadow:
-                0 5px 20px rgba(90, 61, 92, 0.10);
+                0 5px 20px rgba(48, 58, 52, 0.09);
 
             transition: 0.3s;
         }
@@ -248,7 +272,7 @@
             transform: translateY(-6px);
 
             box-shadow:
-                0 12px 28px rgba(90, 61, 92, 0.16);
+                0 12px 28px rgba(48, 58, 52, 0.14);
         }
 
         .gallery-image {
@@ -258,15 +282,15 @@
             background:
                 linear-gradient(
                     135deg,
-                    #F5EFF8,
-                    #E8DDF2
+                    #EEF3EE,
+                    #F5E6DE
                 );
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            color: #806A82;
+            color: #718078;
             font-size: 18px;
             text-align: center;
             padding: 20px;
@@ -274,17 +298,18 @@
 
         .gallery-card h3 {
             text-align: center;
-            color: #5A3D5C;
+            color: #303A34;
             padding: 18px 10px;
             font-size: 20px;
         }
+
 
         /* =========================
            BRAND STORY
         ========================= */
 
         #story {
-            background: #F5EFF8;
+            background: #EEF3EE;
         }
 
         .story-content {
@@ -295,16 +320,17 @@
 
         .story-content p {
             font-size: 18px;
-            color: #625765;
+            color: #59635D;
             margin-bottom: 18px;
         }
+
 
         /* =========================
            FEATURES
         ========================= */
 
         #features {
-            background: #FFFDF8;
+            background: #FCFAF5;
         }
 
         .feature-grid {
@@ -315,13 +341,13 @@
         }
 
         .feature-card {
-            background: #F5EFF8;
+            background: #FFFFFF;
             padding: 35px 25px;
             border-radius: 18px;
             text-align: center;
 
             box-shadow:
-                0 5px 20px rgba(90, 61, 92, 0.08);
+                0 5px 20px rgba(48, 58, 52, 0.08);
 
             transition: 0.3s;
         }
@@ -330,7 +356,7 @@
             transform: translateY(-5px);
 
             box-shadow:
-                0 10px 25px rgba(90, 61, 92, 0.13);
+                0 10px 25px rgba(48, 58, 52, 0.13);
         }
 
         .feature-icon {
@@ -339,21 +365,22 @@
         }
 
         .feature-card h3 {
-            color: #5A3D5C;
+            color: #303A34;
             font-size: 21px;
             margin-bottom: 10px;
         }
 
         .feature-card p {
-            color: #6F6470;
+            color: #68716B;
         }
+
 
         /* =========================
            CUSTOM ORDERS
         ========================= */
 
         #custom {
-            background: #E8DDF2;
+            background: #F5E6DE;
         }
 
         .custom-box {
@@ -369,11 +396,11 @@
             text-align: center;
 
             box-shadow:
-                0 8px 25px rgba(90, 61, 92, 0.10);
+                0 8px 25px rgba(48, 58, 52, 0.10);
         }
 
         .custom-box h2 {
-            color: #5A3D5C;
+            color: #303A34;
             font-size: 34px;
             margin-bottom: 15px;
         }
@@ -382,17 +409,18 @@
             max-width: 700px;
             margin: 0 auto 25px;
 
-            color: #625765;
+            color: #59635D;
 
             font-size: 17px;
         }
+
 
         /* =========================
            CONTACT
         ========================= */
 
         #contact {
-            background: #5A3D5C;
+            background: #303A34;
             color: #FFFFFF;
             text-align: center;
         }
@@ -407,7 +435,7 @@
 
             font-size: 17px;
 
-            color: #F5EFF8;
+            color: #E8EEE9;
         }
 
         .whatsapp {
@@ -433,14 +461,15 @@
             opacity: 0.92;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            background: #3F2B40;
+            background: #222A26;
 
-            color: #E8DDF2;
+            color: #DDE5DF;
 
             text-align: center;
 
@@ -452,6 +481,7 @@
         footer p {
             margin: 5px 0;
         }
+
 
         /* =========================
            TABLET
@@ -478,11 +508,15 @@
             }
 
             .home-logo img {
-                width: 400px;
+                width: 390px;
+            }
+
+            .brand-name {
+                font-size: 46px;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 40px;
             }
 
             .gallery-grid {
@@ -493,6 +527,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
 
         /* =========================
            MOBILE
@@ -534,12 +569,17 @@
                 max-width: 95%;
             }
 
-            .hero h1 {
-                font-size: 34px;
+            .brand-name {
+                font-size: 36px;
+                letter-spacing: 3px;
             }
 
-            .hero h2 {
-                font-size: 19px;
+            .brand-tagline {
+                font-size: 17px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
             }
 
             .hero p {
@@ -575,6 +615,7 @@
             }
         }
 
+
         /* =========================
            SMALL MOBILE
         ========================= */
@@ -590,8 +631,17 @@
                 width: 300px;
             }
 
+            .brand-name {
+                font-size: 30px;
+                letter-spacing: 2px;
+            }
+
+            .brand-tagline {
+                font-size: 15px;
+            }
+
             .hero h1 {
-                font-size: 29px;
+                font-size: 28px;
             }
 
             nav {
@@ -607,6 +657,7 @@
 </head>
 
 <body>
+
 
     <!-- =========================
          HEADER
@@ -654,6 +705,9 @@
 
         <div class="hero">
 
+
+            <!-- LOGO -->
+
             <div class="home-logo">
 
                 <img
@@ -663,20 +717,37 @@
 
             </div>
 
+
+            <!-- BRAND NAME -->
+
+            <div class="brand-name">
+                KINUSAIGA ART
+            </div>
+
+
+            <!-- BRAND TAGLINE -->
+
+            <div class="brand-tagline">
+                Handmade • Creative • Unique
+            </div>
+
+
+            <!-- MAIN MESSAGE -->
+
             <h1>
                 Beautiful Art, Made Affordable
             </h1>
 
-            <h2>
-                Creative • Handmade • Unique
-            </h2>
 
             <p>
-                Discover beautiful Kinusaiga art created with creativity,
-                patience and attention to detail. We create innovative,
-                attractive and cost-effective artworks for gifting,
-                home décor and special occasions.
+                Discover beautiful handmade Kinusaiga art created with
+                creativity, patience and attention to detail. We create
+                innovative, attractive and cost-effective artworks for
+                gifting, home décor and special occasions.
             </p>
+
+
+            <!-- BUTTONS -->
 
             <div class="buttons">
 
@@ -902,7 +973,7 @@
                 <div class="feature-card">
 
                     <div class="feature-icon">
-                        💜
+                        🌿
                     </div>
 
                     <h3>
@@ -1004,6 +1075,7 @@
         </p>
 
     </footer>
+
 
 </body>
 </html>
