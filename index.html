@@ -10,6 +10,10 @@
 
     <style>
 
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -22,8 +26,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #fffaf6;
-            color: #333;
+            background: #FFFDF8;
+            color: #403642;
             line-height: 1.6;
         }
 
@@ -32,12 +36,12 @@
         ========================= */
 
         header {
-            background: #ffffff;
+            background: #FFFFFF;
             width: 100%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 12px rgba(90, 61, 92, 0.12);
         }
 
         .navbar {
@@ -70,16 +74,15 @@
 
         nav a {
             text-decoration: none;
-            color: #4a3028;
+            color: #5A3D5C;
             font-size: 16px;
             font-weight: 600;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #b05a35;
+            color: #B58AB8;
         }
-
 
         /* =========================
            HOME
@@ -96,9 +99,17 @@
             text-align: center;
 
             background:
-                radial-gradient(circle at top left, #fff0df 0%, transparent 35%),
-                radial-gradient(circle at bottom right, #f9dfd0 0%, transparent 35%),
-                #fffaf6;
+                radial-gradient(
+                    circle at top left,
+                    #E8DDF2 0%,
+                    transparent 36%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #F5EFF8 0%,
+                    transparent 38%
+                ),
+                #FFFDF8;
         }
 
         .hero {
@@ -122,15 +133,15 @@
 
         .hero h1 {
             font-size: 48px;
-            color: #4a3028;
+            color: #5A3D5C;
             margin-bottom: 15px;
             line-height: 1.15;
         }
 
         .hero h2 {
             font-size: 22px;
-            color: #b05a35;
-            font-weight: 500;
+            color: #B58AB8;
+            font-weight: 600;
             margin-bottom: 20px;
         }
 
@@ -138,7 +149,7 @@
             max-width: 760px;
             margin: 0 auto 30px;
             font-size: 18px;
-            color: #5b514d;
+            color: #625765;
         }
 
         .buttons {
@@ -158,27 +169,26 @@
         }
 
         .btn-primary {
-            background: #b05a35;
-            color: white;
+            background: #5A3D5C;
+            color: #FFFFFF;
         }
 
         .btn-primary:hover {
-            background: #8f4324;
+            background: #432C45;
             transform: translateY(-2px);
         }
 
         .btn-secondary {
-            background: white;
-            color: #b05a35;
-            border: 2px solid #b05a35;
+            background: #FFFFFF;
+            color: #5A3D5C;
+            border: 2px solid #B58AB8;
         }
 
         .btn-secondary:hover {
-            background: #b05a35;
-            color: white;
+            background: #E8DDF2;
+            color: #5A3D5C;
             transform: translateY(-2px);
         }
-
 
         /* =========================
            GENERAL
@@ -196,7 +206,7 @@
         .section-title {
             text-align: center;
             font-size: 36px;
-            color: #4a3028;
+            color: #5A3D5C;
             margin-bottom: 20px;
         }
 
@@ -204,17 +214,16 @@
             text-align: center;
             max-width: 750px;
             margin: 0 auto 45px;
-            color: #6d625d;
+            color: #6F6470;
             font-size: 17px;
         }
-
 
         /* =========================
            GALLERY
         ========================= */
 
         #gallery {
-            background: #ffffff;
+            background: #FFFFFF;
         }
 
         .gallery-grid {
@@ -225,28 +234,39 @@
         }
 
         .gallery-card {
-            background: #fffaf6;
+            background: #FFFDF8;
             border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 5px 20px rgba(90, 61, 92, 0.10);
+
             transition: 0.3s;
         }
 
         .gallery-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+            box-shadow:
+                0 12px 28px rgba(90, 61, 92, 0.16);
         }
 
         .gallery-image {
             width: 100%;
             height: 280px;
-            background: #f5e9df;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #F5EFF8,
+                    #E8DDF2
+                );
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            color: #9b8173;
+            color: #806A82;
             font-size: 18px;
             text-align: center;
             padding: 20px;
@@ -254,18 +274,17 @@
 
         .gallery-card h3 {
             text-align: center;
-            color: #4a3028;
+            color: #5A3D5C;
             padding: 18px 10px;
             font-size: 20px;
         }
-
 
         /* =========================
            BRAND STORY
         ========================= */
 
         #story {
-            background: #fff4eb;
+            background: #F5EFF8;
         }
 
         .story-content {
@@ -276,17 +295,16 @@
 
         .story-content p {
             font-size: 18px;
-            color: #5c514c;
+            color: #625765;
             margin-bottom: 18px;
         }
-
 
         /* =========================
            FEATURES
         ========================= */
 
         #features {
-            background: #ffffff;
+            background: #FFFDF8;
         }
 
         .feature-grid {
@@ -297,16 +315,22 @@
         }
 
         .feature-card {
-            background: #fffaf6;
+            background: #F5EFF8;
             padding: 35px 25px;
             border-radius: 18px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+
+            box-shadow:
+                0 5px 20px rgba(90, 61, 92, 0.08);
+
             transition: 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(90, 61, 92, 0.13);
         }
 
         .feature-icon {
@@ -315,35 +339,41 @@
         }
 
         .feature-card h3 {
-            color: #4a3028;
+            color: #5A3D5C;
             font-size: 21px;
             margin-bottom: 10px;
         }
 
         .feature-card p {
-            color: #6d625d;
+            color: #6F6470;
         }
-
 
         /* =========================
            CUSTOM ORDERS
         ========================= */
 
         #custom {
-            background: #fff4eb;
+            background: #E8DDF2;
         }
 
         .custom-box {
             max-width: 900px;
             margin: auto;
-            background: #ffffff;
+
+            background: #FFFFFF;
+
             border-radius: 25px;
+
             padding: 55px 30px;
+
             text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(90, 61, 92, 0.10);
         }
 
         .custom-box h2 {
-            color: #4a3028;
+            color: #5A3D5C;
             font-size: 34px;
             margin-bottom: 15px;
         }
@@ -351,59 +381,77 @@
         .custom-box p {
             max-width: 700px;
             margin: 0 auto 25px;
-            color: #5f5550;
+
+            color: #625765;
+
             font-size: 17px;
         }
-
 
         /* =========================
            CONTACT
         ========================= */
 
         #contact {
-            background: #4a3028;
-            color: white;
+            background: #5A3D5C;
+            color: #FFFFFF;
             text-align: center;
         }
 
         #contact .section-title {
-            color: white;
+            color: #FFFFFF;
         }
 
         #contact p {
             max-width: 700px;
             margin: 0 auto 25px;
+
             font-size: 17px;
-            color: #f4e9e2;
+
+            color: #F5EFF8;
         }
 
         .whatsapp {
             display: inline-block;
+
             padding: 14px 30px;
+
             border-radius: 30px;
+
             background: #25D366;
-            color: white;
+
+            color: #FFFFFF;
+
             text-decoration: none;
+
             font-weight: bold;
+
+            transition: 0.3s;
         }
 
+        .whatsapp:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            background: #2f211c;
-            color: #ddd;
+            background: #3F2B40;
+
+            color: #E8DDF2;
+
             text-align: center;
+
             padding: 25px 20px;
+
             font-size: 14px;
         }
 
         footer p {
             margin: 5px 0;
         }
-
 
         /* =========================
            TABLET
@@ -446,7 +494,6 @@
             }
         }
 
-
         /* =========================
            MOBILE
         ========================= */
@@ -455,8 +502,11 @@
 
             .navbar {
                 min-height: auto;
+
                 padding: 10px 15px;
+
                 flex-direction: column;
+
                 gap: 8px;
             }
 
@@ -475,6 +525,7 @@
 
             #home {
                 min-height: 650px;
+
                 padding: 45px 15px 60px;
             }
 
@@ -524,7 +575,6 @@
             }
         }
 
-
         /* =========================
            SMALL MOBILE
         ========================= */
@@ -556,9 +606,7 @@
     </style>
 </head>
 
-
 <body>
-
 
     <!-- =========================
          HEADER
@@ -576,7 +624,6 @@
                 >
 
             </div>
-
 
             <nav>
 
@@ -599,7 +646,6 @@
     </header>
 
 
-
     <!-- =========================
          HOME
     ========================= -->
@@ -617,16 +663,13 @@
 
             </div>
 
-
             <h1>
                 Beautiful Art, Made Affordable
             </h1>
 
-
             <h2>
                 Creative • Handmade • Unique
             </h2>
-
 
             <p>
                 Discover beautiful Kinusaiga art created with creativity,
@@ -635,14 +678,19 @@
                 home décor and special occasions.
             </p>
 
-
             <div class="buttons">
 
-                <a href="#gallery" class="btn btn-primary">
+                <a
+                    href="#gallery"
+                    class="btn btn-primary"
+                >
                     Explore Our Art
                 </a>
 
-                <a href="#custom" class="btn btn-secondary">
+                <a
+                    href="#custom"
+                    class="btn btn-secondary"
+                >
                     Custom Orders
                 </a>
 
@@ -651,7 +699,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -670,7 +717,6 @@
                 Explore our collection of handmade Kinusaiga artworks.
                 More beautiful creations will be added soon.
             </p>
-
 
             <div class="gallery-grid">
 
@@ -760,7 +806,6 @@
     </section>
 
 
-
     <!-- =========================
          BRAND STORY
     ========================= -->
@@ -772,7 +817,6 @@
             <h2 class="section-title">
                 Our Brand Story
             </h2>
-
 
             <div class="story-content">
 
@@ -799,7 +843,6 @@
     </section>
 
 
-
     <!-- =========================
          WHY CHOOSE US
     ========================= -->
@@ -816,7 +859,6 @@
                 Handmade creations designed to be beautiful, meaningful
                 and accessible.
             </p>
-
 
             <div class="feature-grid">
 
@@ -860,7 +902,7 @@
                 <div class="feature-card">
 
                     <div class="feature-icon">
-                        💛
+                        💜
                     </div>
 
                     <h3>
@@ -880,7 +922,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -904,7 +945,10 @@
                     for you.
                 </p>
 
-                <a href="#contact" class="btn btn-primary">
+                <a
+                    href="#contact"
+                    class="btn btn-primary"
+                >
                     Enquire About Custom Art
                 </a>
 
@@ -913,7 +957,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -933,7 +976,6 @@
                 a customized artwork? Contact us directly.
             </p>
 
-
             <a
                 href="https://wa.me/919999999999"
                 class="whatsapp"
@@ -945,7 +987,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -963,7 +1004,6 @@
         </p>
 
     </footer>
-
 
 </body>
 </html>
