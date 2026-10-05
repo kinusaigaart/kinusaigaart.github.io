@@ -6,7 +6,7 @@
 
     <title>Kinusaiga Art | Handmade, Creative & Affordable</title>
 
-    <meta name="description" content="Beautiful handmade Kinusaiga art for gifting, home décor and special occasions. Creative, unique and affordable artwork with customization available.">
+    <meta name="description" content="Beautiful handmade Kinusaiga art for gifting, home décor and special occasions.">
 
     <style>
 
@@ -52,11 +52,6 @@
             gap: 30px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
         .logo img {
             height: 105px;
             width: auto;
@@ -68,7 +63,9 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav a {
@@ -85,7 +82,7 @@
 
 
         /* =========================
-           HOME / HERO
+           HOME
         ========================= */
 
         #home {
@@ -184,7 +181,7 @@
 
 
         /* =========================
-           GENERAL SECTIONS
+           GENERAL
         ========================= */
 
         section {
@@ -213,11 +210,62 @@
 
 
         /* =========================
+           GALLERY
+        ========================= */
+
+        #gallery {
+            background: #ffffff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .gallery-card {
+            background: #fffaf6;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 280px;
+            background: #f5e9df;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #9b8173;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-card h3 {
+            text-align: center;
+            color: #4a3028;
+            padding: 18px 10px;
+            font-size: 20px;
+        }
+
+
+        /* =========================
            BRAND STORY
         ========================= */
 
         #story {
-            background: #ffffff;
+            background: #fff4eb;
         }
 
         .story-content {
@@ -238,7 +286,7 @@
         ========================= */
 
         #features {
-            background: #fff4eb;
+            background: #ffffff;
         }
 
         .feature-grid {
@@ -249,7 +297,7 @@
         }
 
         .feature-card {
-            background: white;
+            background: #fffaf6;
             padding: 35px 25px;
             border-radius: 18px;
             text-align: center;
@@ -282,13 +330,13 @@
         ========================= */
 
         #custom {
-            background: #ffffff;
+            background: #fff4eb;
         }
 
         .custom-box {
             max-width: 900px;
             margin: auto;
-            background: #fff3e8;
+            background: #ffffff;
             border-radius: 25px;
             padding: 55px 30px;
             text-align: center;
@@ -337,12 +385,6 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .whatsapp:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
         }
 
 
@@ -395,6 +437,10 @@
                 font-size: 42px;
             }
 
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .feature-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -420,9 +466,7 @@
             }
 
             nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+                gap: 13px;
             }
 
             nav a {
@@ -434,14 +478,9 @@
                 padding: 45px 15px 60px;
             }
 
-            .home-logo {
-                margin-bottom: 25px;
-            }
-
             .home-logo img {
                 width: 350px;
                 max-width: 95%;
-                max-height: 300px;
             }
 
             .hero h1 {
@@ -464,8 +503,16 @@
                 font-size: 30px;
             }
 
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
             .feature-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-image {
+                height: 260px;
             }
 
             .custom-box {
@@ -498,7 +545,7 @@
             }
 
             nav {
-                gap: 10px;
+                gap: 9px;
             }
 
             nav a {
@@ -523,8 +570,10 @@
 
             <div class="logo">
 
-                <!-- LOGO FILE IS IN THE MAIN FOLDER -->
-                <img src="logo.png" alt="Kinusaiga Art Logo">
+                <img
+                    src="https://kinusaigaart.github.io/logo.png"
+                    alt="Kinusaiga Art Logo"
+                >
 
             </div>
 
@@ -532,6 +581,8 @@
             <nav>
 
                 <a href="#home">Home</a>
+
+                <a href="#gallery">Gallery</a>
 
                 <a href="#story">Our Story</a>
 
@@ -557,12 +608,12 @@
 
         <div class="hero">
 
-
-            <!-- LARGE HOME LOGO -->
-
             <div class="home-logo">
 
-                <img src="logo.png" alt="Kinusaiga Art">
+                <img
+                    src="https://kinusaigaart.github.io/logo.png"
+                    alt="Kinusaiga Art"
+                >
 
             </div>
 
@@ -587,7 +638,7 @@
 
             <div class="buttons">
 
-                <a href="#features" class="btn btn-primary">
+                <a href="#gallery" class="btn btn-primary">
                     Explore Our Art
                 </a>
 
@@ -597,6 +648,112 @@
 
             </div>
 
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section id="gallery">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Our Gallery
+            </h2>
+
+            <p class="section-subtitle">
+                Explore our collection of handmade Kinusaiga artworks.
+                More beautiful creations will be added soon.
+            </p>
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-card">
+
+                    <div class="gallery-image">
+                        Artwork image coming soon
+                    </div>
+
+                    <h3>
+                        Kinusaiga Art
+                    </h3>
+
+                </div>
+
+
+                <div class="gallery-card">
+
+                    <div class="gallery-image">
+                        Artwork image coming soon
+                    </div>
+
+                    <h3>
+                        Handmade Creation
+                    </h3>
+
+                </div>
+
+
+                <div class="gallery-card">
+
+                    <div class="gallery-image">
+                        Artwork image coming soon
+                    </div>
+
+                    <h3>
+                        Creative Art
+                    </h3>
+
+                </div>
+
+
+                <div class="gallery-card">
+
+                    <div class="gallery-image">
+                        Artwork image coming soon
+                    </div>
+
+                    <h3>
+                        Decorative Art
+                    </h3>
+
+                </div>
+
+
+                <div class="gallery-card">
+
+                    <div class="gallery-image">
+                        Artwork image coming soon
+                    </div>
+
+                    <h3>
+                        Gift Art
+                    </h3>
+
+                </div>
+
+
+                <div class="gallery-card">
+
+                    <div class="gallery-image">
+                        Artwork image coming soon
+                    </div>
+
+                    <h3>
+                        Customized Art
+                    </h3>
+
+                </div>
+
+
+            </div>
 
         </div>
 
@@ -644,7 +801,7 @@
 
 
     <!-- =========================
-         FEATURES
+         WHY CHOOSE US
     ========================= -->
 
     <section id="features">
@@ -682,7 +839,6 @@
                 </div>
 
 
-
                 <div class="feature-card">
 
                     <div class="feature-icon">
@@ -699,7 +855,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="feature-card">
@@ -778,11 +933,6 @@
                 a customized artwork? Contact us directly.
             </p>
 
-
-            <!--
-                CHANGE THE NUMBER BELOW TO YOUR ACTUAL
-                WHATSAPP BUSINESS NUMBER.
-            -->
 
             <a
                 href="https://wa.me/919999999999"
