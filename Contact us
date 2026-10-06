@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Custom Orders | Kinusaiga Art</title>
+<link rel="canonical" href="https://kinusaigaart.in/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-page: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --primary: #1E3A5F;
+    --primary-dark: #12253D;
+    --accent-gold: #C29A38;
+    --accent-gold-light: #FBF6EA;
+    --text-primary: #1D2530;
+    --text-secondary: #586575;
+    --border-soft: #E2E8F0;
+    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+    --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Plus Jakarta Sans', sans-serif; background:var(--bg-page); color:var(--text-primary); line-height:1.7; }
+h1, h2, h3, .footer-brand { font-family:'Playfair Display', Georgia, serif; }
+a { text-decoration:none; color:inherit; }
+
+header { background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border-soft); position:sticky; top:0; z-index:1000; }
+.navbar { max-width:1240px; min-height:80px; margin:auto; padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.brand-logo { display:flex; align-items:center; gap:12px; }
+.brand-emblem { width:44px; height:44px; background:linear-gradient(135deg, var(--primary), var(--primary-dark)); border:2px solid var(--accent-gold); border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--accent-gold); font-family:'Cinzel', serif; font-size:20px; font-weight:700; }
+.brand-title { font-family:'Cinzel', serif; font-size:19px; font-weight:700; letter-spacing:2px; color:var(--primary); }
+.brand-subtitle { font-size:10.5px; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent-gold); font-weight:600; }
+nav { display:flex; gap:22px; }
+nav a { font-size:14.5px; font-weight:600; color:var(--text-primary); transition:0.2s; }
+nav a:hover, nav a.active { color:var(--accent-gold); }
+
+section { padding:70px 7%; max-width:960px; margin:auto; }
+.page-header { text-align:center; margin-bottom:45px; }
+.page-header h1 { font-size:42px; color:var(--primary); margin-bottom:8px; }
+.page-header p { color:var(--text-secondary); font-size:17px; }
+
+.contact-card { background:linear-gradient(135deg, #182C47 0%, #0F1E31 100%); border-radius:24px; padding:55px 40px; text-align:center; color:white; border:1px solid rgba(194, 154, 56, 0.3); box-shadow:var(--shadow-lg); margin-bottom:40px; }
+.contact-card h2 { font-size:32px; color:var(--accent-gold); margin-bottom:14px; }
+.contact-card p { font-size:16.5px; color:#D6E0EA; max-width:620px; margin:0 auto 28px; }
+
+.whatsapp-cta { display:inline-flex; align-items:center; gap:10px; padding:15px 36px; background:#25D366; color:white; border-radius:30px; font-size:16px; font-weight:700; transition:0.25s; box-shadow:0 6px 20px rgba(37,211,102,0.3); }
+.whatsapp-cta:hover { background:#1EBE5D; transform:translateY(-2px); }
+
+.info-cards-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; }
+.info-box { background:var(--bg-surface); padding:32px 28px; border-radius:18px; border:1px solid var(--border-soft); box-shadow:var(--shadow-sm); }
+.info-box h3 { color:var(--primary); font-size:20px; margin-bottom:8px; }
+.info-box p { color:var(--text-secondary); font-size:14.5px; }
+
+footer { background:#0E1724; color:#D6DEE8; text-align:center; padding:40px 20px; margin-top:60px; }
+.footer-brand { font-family:'Cinzel', serif; color:var(--accent-gold); font-size:20px; letter-spacing:2px; margin-bottom:6px; }
+footer p { font-size:13.5px; color:#8C9BAE; }
+@media (max-width:850px) { .info-cards-grid { grid-template-columns:1fr; } .navbar { flex-direction:column; gap:12px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="brand-logo">
+            <div class="brand-emblem">K</div>
+            <div class="brand-text-block">
+                <span class="brand-title">KINUSAIGA ART</span>
+                <span class="brand-subtitle">Handmade Studio</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="payment.html">How to Buy</a>
+            <a href="story.html">Our Story</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section>
+    <div class="page-header">
+        <h1>Get in Touch</h1>
+        <p>Let us discuss your artwork ideas, custom gifts, or studio visits</p>
+    </div>
+
+    <div class="contact-card">
+        <h2>Direct Artist WhatsApp</h2>
+        <p>Whether you want to place a custom order, enquire about an existing piece, or request specific dimensions, reach out to us directly.</p>
+        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20Kinusaiga%20Art" target="_blank" class="whatsapp-cta">
+            <span>💬</span> Message on WhatsApp
+        </a>
+    </div>
+
+    <div class="info-cards-grid">
+        <div class="info-box">
+            <h3>🎨 Custom Artworks</h3>
+            <p>We accept bespoke commissions for anniversaries, housewarmings, portraits, and festival gifts with personalized sizing and colors.</p>
+        </div>
+        <div class="info-box">
+            <h3>📦 Safe All-India Delivery</h3>
+            <p>Every piece is securely bubble-wrapped with shock protection and dispatched with live courier tracking straight to your doorstep.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-brand">KINUSAIGA ART</div>
+    <p>Handmade • Creative • Unique</p>
+    <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
