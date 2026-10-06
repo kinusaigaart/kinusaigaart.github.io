@@ -10,9 +10,30 @@
 
 <style>
 
-/* =========================
+/* =========================================
+   COLOUR PALETTE
+   Royal Purple + Turquoise + Coral + Ivory + Gold
+========================================= */
+
+:root {
+    --purple: #4B1F6F;
+    --purple-dark: #35144F;
+    --turquoise: #16A6B6;
+    --turquoise-light: #DDF5F5;
+    --coral: #F2675A;
+    --coral-light: #FCE3DF;
+    --ivory: #FFF8E8;
+    --ivory-light: #FFFDF7;
+    --gold: #D4A63A;
+    --gold-light: #F7E9BD;
+    --text: #493C4C;
+    --white: #FFFFFF;
+}
+
+
+/* =========================================
    GENERAL
-========================= */
+========================================= */
 
 * {
     margin: 0;
@@ -26,8 +47,8 @@ html {
 
 body {
     font-family: Georgia, "Times New Roman", serif;
-    background: #FFF8F0;
-    color: #4A2545;
+    background: var(--ivory);
+    color: var(--text);
     line-height: 1.7;
 }
 
@@ -37,17 +58,17 @@ a {
 }
 
 section {
-    padding: 80px 8%;
+    padding: 85px 8%;
 }
 
 
-/* =========================
+/* =========================================
    NAVIGATION
-========================= */
+========================================= */
 
 header {
-    background: #FFF8F0;
-    border-bottom: 1px solid #C5A46D;
+    background: var(--ivory-light);
+    border-bottom: 2px solid var(--gold-light);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -55,11 +76,14 @@ header {
 
 .navbar {
     max-width: 1200px;
+    min-height: 88px;
     margin: auto;
-    min-height: 85px;
+    padding: 10px 20px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
@@ -72,35 +96,49 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    justify-content: center;
+    gap: 27px;
 }
 
 nav a {
-    color: #4A2545;
+    color: var(--purple);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #D99AAE;
+    color: var(--coral);
 }
 
 
-/* =========================
-   HOME / HERO
-========================= */
+/* =========================================
+   HOME
+========================================= */
 
 #home {
-    min-height: 700px;
-    padding: 70px 8%;
-    background:
-        radial-gradient(circle at top right, #F3DCE3 0%, transparent 30%),
-        #FFF8F0;
+    min-height: 720px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
+    padding: 70px 8%;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(22,166,182,0.13),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(242,103,90,0.13),
+            transparent 25%
+        ),
+        var(--ivory);
 }
 
 .hero {
@@ -108,399 +146,617 @@ nav a:hover {
     margin: auto;
 }
 
+
+/* Logo */
+
 .home-logo img {
-    width: 145px;
-    margin-bottom: 20px;
+    width: 150px;
+    margin-bottom: 18px;
 }
 
+
+/* Brand name */
+
 .brand-name {
-    font-family: Georgia, "Times New Roman", serif;
     font-size: 58px;
     letter-spacing: 6px;
     font-weight: bold;
-    color: #4A2545;
-    margin-bottom: 8px;
+
+    color: var(--purple);
+
+    margin-bottom: 5px;
 }
 
+
+/* Tagline */
+
 .brand-tagline {
-    color: #D99AAE;
+    color: var(--turquoise);
+
     font-size: 19px;
+    font-weight: bold;
+
     letter-spacing: 3px;
+
     margin-bottom: 28px;
 }
 
+
+/* Main heading */
+
 .hero h1 {
     font-size: 42px;
-    color: #4A2545;
+
+    color: var(--purple);
+
     margin-bottom: 20px;
 }
 
 .hero h1::after {
     content: "";
+
     display: block;
-    width: 75px;
-    height: 3px;
-    background: #C5A46D;
+
+    width: 90px;
+    height: 4px;
+
+    background: var(--coral);
+
     margin: 18px auto 0;
+
+    border-radius: 5px;
 }
 
+
+/* Description */
+
 .hero p {
-    max-width: 760px;
+    max-width: 770px;
+
     margin: 25px auto;
+
     font-size: 18px;
-    color: #5D4A58;
+
+    color: var(--text);
 }
+
+
+/* Buttons */
 
 .buttons {
     margin-top: 35px;
+
     display: flex;
     justify-content: center;
+
     gap: 18px;
+
     flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    padding: 13px 28px;
+
+    padding: 13px 30px;
+
     border-radius: 30px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
+
+/* Primary */
+
 .btn-primary {
-    background: #4A2545;
-    color: #FFF8F0;
-    border: 2px solid #4A2545;
+    background: var(--purple);
+
+    color: var(--white);
+
+    border: 2px solid var(--purple);
 }
 
 .btn-primary:hover {
-    background: #D99AAE;
-    border-color: #D99AAE;
-    color: #4A2545;
-}
+    background: var(--turquoise);
 
-.btn-secondary {
-    background: transparent;
-    color: #4A2545;
-    border: 2px solid #C5A46D;
-}
+    border-color: var(--turquoise);
 
-.btn-secondary:hover {
-    background: #C5A46D;
     color: white;
 }
 
 
-/* =========================
+/* Secondary */
+
+.btn-secondary {
+    background: transparent;
+
+    color: var(--purple);
+
+    border: 2px solid var(--coral);
+}
+
+.btn-secondary:hover {
+    background: var(--coral);
+
+    color: white;
+}
+
+
+/* =========================================
    SECTION TITLES
-========================= */
+========================================= */
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+
+    margin-bottom: 52px;
 }
 
 .section-title h2 {
-    font-size: 36px;
-    color: #4A2545;
+    font-size: 37px;
+
+    color: var(--purple);
+
     margin-bottom: 10px;
 }
 
 .section-title p {
-    color: #76616F;
+    color: #746677;
+
     font-size: 17px;
 }
 
 .section-title::after {
     content: "";
+
     display: block;
-    width: 60px;
-    height: 3px;
-    background: #D99AAE;
+
+    width: 65px;
+    height: 4px;
+
+    background: var(--turquoise);
+
     margin: 18px auto 0;
+
+    border-radius: 5px;
 }
 
 
-/* =========================
+/* =========================================
    GALLERY
-========================= */
+========================================= */
 
 #gallery {
-    background: #FDF1F3;
+    background: var(--turquoise-light);
 }
 
 .gallery-grid {
     max-width: 1150px;
+
     margin: auto;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
 }
 
 .gallery-card {
-    background: #FFFFFF;
-    border: 1px solid #E7D5D9;
-    border-radius: 14px;
+    background: var(--white);
+
+    border-radius: 16px;
+
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(74, 37, 69, 0.08);
+
+    border: 2px solid rgba(22,166,182,0.18);
+
+    box-shadow:
+        0 8px 25px rgba(75,31,111,0.09);
+
     transition: 0.3s;
 }
 
 .gallery-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 35px rgba(74, 37, 69, 0.14);
+    transform: translateY(-8px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 15px 35px rgba(75,31,111,0.16);
 }
 
+
+/* Placeholder artwork area */
+
 .gallery-image {
-    height: 230px;
-    background: #F7E5EA;
+    height: 235px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    color: #8A9A7B;
-    font-size: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--coral-light),
+            var(--gold-light)
+        );
+
+    color: var(--purple);
+
+    font-size: 19px;
+
+    font-weight: bold;
+
     letter-spacing: 1px;
 }
 
+.gallery-card:nth-child(even) .gallery-image {
+    background:
+        linear-gradient(
+            135deg,
+            var(--turquoise-light),
+            var(--gold-light)
+        );
+}
+
+
+/* Gallery text */
+
 .gallery-card-content {
     padding: 22px;
+
     text-align: center;
 }
 
 .gallery-card h3 {
-    color: #4A2545;
+    color: var(--purple);
+
     margin-bottom: 7px;
+
     font-size: 21px;
 }
 
 .gallery-card p {
-    color: #76616F;
+    color: #746677;
+
     font-size: 15px;
 }
 
 
-/* =========================
+/* =========================================
    OUR STORY
-========================= */
+========================================= */
 
 #story {
-    background: #FFF8F0;
+    background: var(--ivory);
 }
 
 .story-content {
     max-width: 900px;
+
     margin: auto;
+
     text-align: center;
 }
 
 .story-content p {
     margin-bottom: 18px;
+
     font-size: 17px;
-    color: #5D4A58;
+
+    color: var(--text);
 }
 
 
-/* =========================
+/* =========================================
    WHY US
-========================= */
+========================================= */
 
 #features {
-    background: #F5E9DF;
+    background: var(--coral-light);
 }
 
 .features-grid {
     max-width: 1100px;
+
     margin: auto;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
 }
 
 .feature-card {
-    background: #FFFDF9;
+    background: var(--white);
+
     padding: 35px 25px;
+
     text-align: center;
-    border-radius: 15px;
-    border: 1px solid #E1CFAE;
-    box-shadow: 0 8px 25px rgba(74, 37, 69, 0.07);
+
+    border-radius: 16px;
+
+    border: 2px solid rgba(242,103,90,0.20);
+
+    box-shadow:
+        0 8px 25px rgba(75,31,111,0.07);
+
+    transition: 0.3s;
 }
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--gold);
+}
+
+
+/* Icons */
 
 .feature-icon {
-    width: 65px;
-    height: 65px;
+    width: 68px;
+    height: 68px;
+
     margin: 0 auto 18px;
+
     border-radius: 50%;
-    background: #F3DCE3;
-    color: #4A2545;
+
+    background: var(--purple);
+
+    color: var(--gold-light);
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     font-size: 28px;
+
+    border: 4px solid var(--gold-light);
 }
 
+.feature-card:nth-child(2) .feature-icon {
+    background: var(--turquoise);
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    background: var(--coral);
+}
+
+
 .feature-card h3 {
-    color: #4A2545;
+    color: var(--purple);
+
     margin-bottom: 12px;
 }
 
 .feature-card p {
-    color: #6B5964;
+    color: #746677;
+
     font-size: 15px;
 }
 
 
-/* =========================
+/* =========================================
    CUSTOM ORDERS
-========================= */
+========================================= */
 
 #custom {
-    background: #FFF8F0;
+    background: var(--ivory);
 }
 
 .custom-box {
     max-width: 950px;
+
     margin: auto;
-    padding: 55px 45px;
+
+    padding: 58px 45px;
+
     text-align: center;
-    background: #4A2545;
-    color: #FFF8F0;
-    border-radius: 20px;
+
+    background: var(--purple);
+
+    color: var(--white);
+
+    border-radius: 22px;
+
     position: relative;
+
     overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(75,31,111,0.20);
 }
+
+
+/* Decorative circles */
 
 .custom-box::before {
     content: "";
+
     position: absolute;
-    width: 180px;
-    height: 180px;
-    border: 1px solid #C5A46D;
+
+    width: 200px;
+    height: 200px;
+
+    border: 2px solid rgba(212,166,58,0.6);
+
     border-radius: 50%;
-    top: -80px;
-    right: -60px;
+
+    top: -100px;
+    right: -70px;
 }
 
 .custom-box::after {
     content: "";
+
     position: absolute;
-    width: 130px;
-    height: 130px;
-    border: 1px solid #D99AAE;
+
+    width: 150px;
+    height: 150px;
+
+    border: 2px solid rgba(242,103,90,0.6);
+
     border-radius: 50%;
-    bottom: -65px;
-    left: -45px;
+
+    bottom: -75px;
+    left: -50px;
 }
 
+
 .custom-box h2 {
-    font-size: 34px;
+    font-size: 35px;
+
     margin-bottom: 18px;
-    color: #FFF8F0;
+
+    color: var(--gold-light);
 }
 
 .custom-box p {
     max-width: 720px;
+
     margin: auto;
-    color: #F5E5EA;
+
+    color: #F8EFFB;
+
     font-size: 17px;
 }
 
+
+/* Custom button */
+
 .custom-button {
     display: inline-block;
-    margin-top: 28px;
-    padding: 13px 30px;
-    background: #D99AAE;
-    color: #4A2545;
+
+    margin-top: 30px;
+
+    padding: 14px 32px;
+
+    background: var(--coral);
+
+    color: white;
+
     border-radius: 30px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .custom-button:hover {
-    background: #C5A46D;
+    background: var(--turquoise);
+
     color: white;
 }
 
 
-/* =========================
+/* =========================================
    CONTACT
-========================= */
+========================================= */
 
 #contact {
-    background: #FDF1F3;
+    background: var(--turquoise-light);
+
     text-align: center;
 }
 
 .contact-content {
     max-width: 700px;
+
     margin: auto;
 }
 
 .contact-content p {
-    color: #6B5964;
+    color: var(--text);
+
     font-size: 17px;
+
     margin-bottom: 20px;
 }
 
+
+/* WhatsApp */
+
 .whatsapp-button {
     display: inline-block;
+
     margin-top: 15px;
+
     padding: 14px 32px;
-    background: #4A2545;
-    color: #FFF8F0;
+
+    background: var(--purple);
+
+    color: white;
+
     border-radius: 30px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .whatsapp-button:hover {
-    background: #D99AAE;
-    color: #4A2545;
+    background: var(--coral);
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
-    background: #32192F;
-    color: #F9EDEF;
+    background: var(--purple-dark);
+
+    color: #F8EFFB;
+
     text-align: center;
-    padding: 30px 20px;
+
+    padding: 32px 20px;
 }
 
 footer p {
     margin: 5px 0;
+
     font-size: 14px;
 }
 
 .footer-brand {
-    color: #D99AAE;
-    font-size: 20px;
-    letter-spacing: 2px;
+    color: var(--gold);
+
+    font-size: 21px;
+
+    letter-spacing: 3px;
+
     font-weight: bold;
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
 @media (max-width: 900px) {
 
     .navbar {
         padding: 15px 25px;
+
         flex-direction: column;
     }
 
     nav {
         flex-wrap: wrap;
-        justify-content: center;
+
         gap: 15px;
     }
 
     .brand-name {
         font-size: 43px;
+
         letter-spacing: 4px;
     }
 
@@ -514,9 +770,11 @@ footer p {
 
     .features-grid {
         grid-template-columns: 1fr;
+
         max-width: 500px;
     }
 }
+
 
 @media (max-width: 600px) {
 
@@ -538,11 +796,13 @@ footer p {
 
     .brand-name {
         font-size: 31px;
+
         letter-spacing: 3px;
     }
 
     .brand-tagline {
         font-size: 15px;
+
         letter-spacing: 2px;
     }
 
@@ -563,7 +823,7 @@ footer p {
     }
 
     .custom-box {
-        padding: 40px 25px;
+        padding: 42px 25px;
     }
 
     .custom-box h2 {
@@ -578,27 +838,37 @@ footer p {
 <body>
 
 
-<!-- =========================
+<!-- =========================================
      NAVIGATION
-========================= -->
+========================================= -->
 
 <header>
 
     <div class="navbar">
 
         <div class="logo">
+
             <img
                 src="https://kinusaigaart.github.io/logo.png"
                 alt="Kinusaiga Art Logo">
+
         </div>
 
+
         <nav>
+
             <a href="#home">Home</a>
+
             <a href="#gallery">Gallery</a>
+
             <a href="#story">Our Story</a>
+
             <a href="#features">Why Us</a>
+
             <a href="#custom">Custom Orders</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
 
     </div>
@@ -607,50 +877,76 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      HOME
-========================= -->
+========================================= -->
 
 <section id="home">
 
     <div class="hero">
 
+
         <div class="home-logo">
+
             <img
                 src="https://kinusaigaart.github.io/logo.png"
                 alt="Kinusaiga Art">
+
         </div>
+
 
         <div class="brand-name">
+
             KINUSAIGA ART
+
         </div>
+
 
         <div class="brand-tagline">
+
             Handmade • Creative • Unique
+
         </div>
 
+
         <h1>
+
             Beautiful Art, Made Affordable
+
         </h1>
 
+
         <p>
+
             Discover beautiful handmade Kinusaiga art created with
             creativity, patience and attention to detail. We create
             innovative, attractive and cost-effective artworks for
             gifting, home décor and special occasions.
+
         </p>
+
 
         <div class="buttons">
 
-            <a href="#gallery" class="btn btn-primary">
+            <a
+                href="#gallery"
+                class="btn btn-primary">
+
                 Explore Our Art
+
             </a>
 
-            <a href="#custom" class="btn btn-secondary">
+
+            <a
+                href="#custom"
+                class="btn btn-secondary">
+
                 Custom Orders
+
             </a>
 
         </div>
+
 
     </div>
 
@@ -658,11 +954,12 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      GALLERY
-========================= -->
+========================================= -->
 
 <section id="gallery">
+
 
     <div class="section-title">
 
@@ -680,10 +977,14 @@ footer p {
     <div class="gallery-grid">
 
 
+        <!-- Gallery 1 -->
+
         <div class="gallery-card">
 
             <div class="gallery-image">
+
                 Kinusaiga Artwork
+
             </div>
 
             <div class="gallery-card-content">
@@ -701,11 +1002,14 @@ footer p {
         </div>
 
 
+        <!-- Gallery 2 -->
 
         <div class="gallery-card">
 
             <div class="gallery-image">
+
                 Handmade Creation
+
             </div>
 
             <div class="gallery-card-content">
@@ -723,11 +1027,14 @@ footer p {
         </div>
 
 
+        <!-- Gallery 3 -->
 
         <div class="gallery-card">
 
             <div class="gallery-image">
+
                 Creative Art
+
             </div>
 
             <div class="gallery-card-content">
@@ -745,11 +1052,14 @@ footer p {
         </div>
 
 
+        <!-- Gallery 4 -->
 
         <div class="gallery-card">
 
             <div class="gallery-image">
+
                 Decorative Art
+
             </div>
 
             <div class="gallery-card-content">
@@ -767,11 +1077,14 @@ footer p {
         </div>
 
 
+        <!-- Gallery 5 -->
 
         <div class="gallery-card">
 
             <div class="gallery-image">
+
                 Gift Art
+
             </div>
 
             <div class="gallery-card-content">
@@ -789,11 +1102,14 @@ footer p {
         </div>
 
 
+        <!-- Gallery 6 -->
 
         <div class="gallery-card">
 
             <div class="gallery-image">
+
                 Customized Art
+
             </div>
 
             <div class="gallery-card-content">
@@ -817,11 +1133,12 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      OUR STORY
-========================= -->
+========================================= -->
 
 <section id="story">
+
 
     <div class="section-title">
 
@@ -843,16 +1160,19 @@ footer p {
             craftsmanship and the endless possibilities of fabric.
         </p>
 
+
         <p>
             Every artwork is carefully designed and created by hand,
             turning simple materials into beautiful decorative pieces.
         </p>
+
 
         <p>
             Our aim is to make creative and attractive Kinusaiga art
             accessible to everyone without compromising on the joy
             of handmade artistry.
         </p>
+
 
         <p>
             Whether it is a gift, a home decoration or a personalised
@@ -866,11 +1186,12 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      WHY US
-========================= -->
+========================================= -->
 
 <section id="features">
+
 
     <div class="section-title">
 
@@ -950,11 +1271,12 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      CUSTOM ORDERS
-========================= -->
+========================================= -->
 
 <section id="custom">
+
 
     <div class="custom-box">
 
@@ -962,11 +1284,13 @@ footer p {
             Create Something Special
         </h2>
 
+
         <p>
             Looking for a unique gift or a special artwork?
             We provide customized Kinusaiga art based on your
             requirements, theme, occasion or personal idea.
         </p>
+
 
         <a
             href="https://wa.me/919999999999"
@@ -983,11 +1307,12 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      CONTACT
-========================= -->
+========================================= -->
 
 <section id="contact">
+
 
     <div class="section-title">
 
@@ -1009,6 +1334,7 @@ footer p {
             custom orders and collaborations, contact us directly.
         </p>
 
+
         <a
             href="https://wa.me/919999999999"
             target="_blank"
@@ -1024,9 +1350,9 @@ footer p {
 
 
 
-<!-- =========================
+<!-- =========================================
      FOOTER
-========================= -->
+========================================= -->
 
 <footer>
 
