@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Buy & Payment | Kinusaiga Art</title>
+<link rel="canonical" href="https://kinusaigaart.in/payment.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-page: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --primary: #1E3A5F;
+    --primary-dark: #12253D;
+    --accent-gold: #C29A38;
+    --accent-gold-light: #FBF6EA;
+    --text-primary: #1D2530;
+    --text-secondary: #586575;
+    --border-soft: #E2E8F0;
+    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+    --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Plus Jakarta Sans', sans-serif; background:var(--bg-page); color:var(--text-primary); line-height:1.7; }
+h1, h2, h3, h4, .footer-brand { font-family:'Playfair Display', Georgia, serif; }
+a { text-decoration:none; color:inherit; }
+
+header { background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border-soft); position:sticky; top:0; z-index:1000; }
+.navbar { max-width:1240px; min-height:80px; margin:auto; padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.brand-logo { display:flex; align-items:center; gap:12px; }
+.brand-emblem { width:44px; height:44px; background:linear-gradient(135deg, var(--primary), var(--primary-dark)); border:2px solid var(--accent-gold); border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--accent-gold); font-family:'Cinzel', serif; font-size:20px; font-weight:700; }
+.brand-title { font-family:'Cinzel', serif; font-size:19px; font-weight:700; letter-spacing:2px; color:var(--primary); }
+.brand-subtitle { font-size:10.5px; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent-gold); font-weight:600; }
+nav { display:flex; gap:22px; }
+nav a { font-size:14.5px; font-weight:600; color:var(--text-primary); transition:0.2s; }
+nav a:hover, nav a.active { color:var(--accent-gold); }
+
+section { padding:70px 7%; max-width:1100px; margin:auto; }
+.page-header { text-align:center; margin-bottom:50px; }
+.page-header h1 { font-size:40px; color:var(--primary); margin-bottom:8px; }
+.page-header p { color:var(--text-secondary); font-size:17px; }
+
+.payment-container { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch; }
+.order-steps { background:var(--bg-surface); border:1px solid var(--border-soft); border-radius:20px; padding:36px 30px; box-shadow:var(--shadow-sm); }
+.order-steps h3 { color:var(--primary); font-size:24px; margin-bottom:22px; }
+.step-item { display:flex; gap:16px; margin-bottom:20px; }
+.step-num { width:36px; height:36px; border-radius:50%; background:var(--accent-gold-light); color:#8C6A1B; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-text h4 { font-size:16px; color:var(--primary); margin-bottom:4px; }
+.step-text p { font-size:14px; color:var(--text-secondary); }
+
+.payment-card { background:linear-gradient(135deg, #182C47 0%, #0F1E31 100%); border:1px solid rgba(194, 154, 56, 0.3); border-radius:22px; padding:38px 30px; color:white; box-shadow:var(--shadow-lg); display:flex; flex-direction:column; justify-content:center; }
+.payment-card h3 { color:var(--accent-gold); font-size:24px; margin-bottom:8px; text-align:center; }
+.payment-card p.subtitle { color:#D6E0EA; font-size:14px; margin-bottom:24px; text-align:center; }
+
+.upi-highlight-box { background:rgba(255,255,255,0.08); border:1.5px dashed var(--accent-gold); border-radius:16px; padding:20px; text-align:center; margin-bottom:22px; }
+.upi-label { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--accent-gold); font-weight:700; margin-bottom:8px; }
+.upi-id-value { font-family:monospace; font-size:19px; font-weight:700; color:#FFFFFF; background:rgba(0,0,0,0.25); padding:8px 16px; border-radius:8px; display:inline-block; margin-bottom:12px; }
+.btn-copy-upi { display:inline-block; background:var(--accent-gold); color:#12253D; font-size:13px; font-weight:700; padding:7px 18px; border-radius:20px; cursor:pointer; border:none; transition:0.2s; }
+.btn-copy-upi:hover { background:#E5B445; transform:translateY(-2px); }
+
+.bank-details-box { background:rgba(255,255,255,0.05); border-radius:12px; padding:16px 20px; text-align:center; }
+.coming-soon-badge { display:inline-block; background:rgba(194,154,56,0.2); color:var(--accent-gold); border:1px solid var(--accent-gold); padding:4px 14px; border-radius:20px; font-size:12px; font-weight:600; margin-top:6px; text-transform:uppercase; letter-spacing:1px; }
+
+footer { background:#0E1724; color:#D6DEE8; text-align:center; padding:40px 20px; margin-top:60px; }
+.footer-brand { font-family:'Cinzel', serif; color:var(--accent-gold); font-size:20px; letter-spacing:2px; margin-bottom:6px; }
+footer p { font-size:13.5px; color:#8C9BAE; }
+@media (max-width:850px) { .payment-container { grid-template-columns:1fr; } .navbar { flex-direction:column; gap:12px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="brand-logo">
+            <div class="brand-emblem">K</div>
+            <div class="brand-text-block">
+                <span class="brand-title">KINUSAIGA ART</span>
+                <span class="brand-subtitle">Handmade Studio</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="payment.html" class="active">How to Buy</a>
+            <a href="story.html">Our Story</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section>
+    <div class="page-header">
+        <h1>How to Buy & Payment</h1>
+        <p>Simple, transparent, and direct from the artist studio</p>
+    </div>
+
+    <div class="payment-container">
+        <div class="order-steps">
+            <h3>Ordering in 3 Simple Steps</h3>
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-text">
+                    <h4>Select Your Piece</h4>
+                    <p>Choose your artwork from our Gallery and connect on WhatsApp to confirm piece availability.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-text">
+                    <h4>Make UPI Payment</h4>
+                    <p>Transfer the amount securely to our studio UPI ID using any payment app (GPay, PhonePe, Paytm).</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-text">
+                    <h4>Share Confirmation</h4>
+                    <p>Send the payment screenshot and delivery address on WhatsApp. Your piece will be packed securely and dispatched.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-card">
+            <h3>Direct UPI Payment</h3>
+            <p class="subtitle">Pay conveniently with any UPI enabled app</p>
+            <div class="upi-highlight-box">
+                <div class="upi-label">Official Studio UPI ID</div>
+                <div class="upi-id-value" id="upiText">aksnsdrhuf@kotak</div>
+                <div><button class="btn-copy-upi" onclick="copyUPI()">📋 Copy UPI ID</button></div>
+            </div>
+            <div class="bank-details-box">
+                <p style="color:#E2E8F0; font-size:14px;">Direct Bank Account (NEFT / IMPS)</p>
+                <div class="coming-soon-badge">Details Coming Soon</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-brand">KINUSAIGA ART</div>
+    <p>Handmade • Creative • Unique</p>
+    <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
+</footer>
+
+<script>
+function copyUPI() {
+    const upi = document.getElementById("upiText").innerText;
+    navigator.clipboard.writeText(upi).then(() => {
+        const btn = document.querySelector(".btn-copy-upi");
+        btn.innerText = "✓ Copied to Clipboard!";
+        setTimeout(() => { btn.innerText = "📋 Copy UPI ID"; }, 2500);
+    });
+}
+</script>
+</body>
+</html>
