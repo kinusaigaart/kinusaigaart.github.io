@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Reviews | Kinusaiga Art</title>
+<link rel="canonical" href="https://kinusaigaart.in/reviews.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-page: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --primary: #1E3A5F;
+    --primary-dark: #12253D;
+    --accent-gold: #C29A38;
+    --accent-gold-light: #FBF6EA;
+    --text-primary: #1D2530;
+    --text-secondary: #586575;
+    --border-soft: #E2E8F0;
+    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+    --shadow-md: 0 10px 30px rgba(30, 58, 95, 0.08);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Plus Jakarta Sans', sans-serif; background:var(--bg-page); color:var(--text-primary); line-height:1.7; }
+h1, h2, h3, h4, .footer-brand { font-family:'Playfair Display', Georgia, serif; }
+a { text-decoration:none; color:inherit; }
+
+header { background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border-soft); position:sticky; top:0; z-index:1000; }
+.navbar { max-width:1240px; min-height:80px; margin:auto; padding:12px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.brand-logo { display:flex; align-items:center; gap:12px; }
+.brand-emblem { width:44px; height:44px; background:linear-gradient(135deg, var(--primary), var(--primary-dark)); border:2px solid var(--accent-gold); border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--accent-gold); font-family:'Cinzel', serif; font-size:20px; font-weight:700; }
+.brand-title { font-family:'Cinzel', serif; font-size:19px; font-weight:700; letter-spacing:2px; color:var(--primary); }
+.brand-subtitle { font-size:10.5px; letter-spacing:1.8px; text-transform:uppercase; color:var(--accent-gold); font-weight:600; }
+nav { display:flex; gap:22px; }
+nav a { font-size:14.5px; font-weight:600; color:var(--text-primary); transition:0.2s; }
+nav a:hover, nav a.active { color:var(--accent-gold); }
+
+section { padding:70px 7%; max-width:1240px; margin:auto; }
+.page-header { text-align:center; margin-bottom:50px; }
+.page-header h1 { font-size:40px; color:var(--primary); margin-bottom:8px; }
+.page-header p { color:var(--text-secondary); font-size:17px; }
+
+.testimonials-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; }
+.testimonial-card { background:var(--bg-surface); border-radius:20px; padding:34px 28px; border:1px solid var(--border-soft); box-shadow:var(--shadow-sm); display:flex; flex-direction:column; justify-content:space-between; }
+.stars { color:#E5A93B; font-size:18px; margin-bottom:14px; }
+.testimonial-text { font-size:15px; color:var(--text-secondary); line-height:1.7; margin-bottom:22px; font-style:italic; }
+.client-info { display:flex; align-items:center; gap:14px; border-top:1px solid var(--border-soft); padding-top:16px; }
+.client-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg, var(--primary), var(--accent-gold)); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:17px; }
+.client-details h4 { font-size:16px; color:var(--primary); margin-bottom:2px; }
+.client-details span { font-size:12.5px; color:#8C6A1B; font-weight:600; }
+
+.share-review-box { text-align:center; margin-top:50px; }
+.btn-review { display:inline-block; padding:13px 30px; background:var(--bg-surface); color:var(--primary); border:1.5px solid var(--accent-gold); border-radius:30px; font-weight:600; font-size:15px; transition:0.25s; }
+.btn-review:hover { background:var(--accent-gold); color:white; transform:translateY(-2px); }
+
+footer { background:#0E1724; color:#D6DEE8; text-align:center; padding:40px 20px; margin-top:60px; }
+.footer-brand { font-family:'Cinzel', serif; color:var(--accent-gold); font-size:20px; letter-spacing:2px; margin-bottom:6px; }
+footer p { font-size:13.5px; color:#8C9BAE; }
+@media (max-width:900px) { .testimonials-grid { grid-template-columns:1fr; } .navbar { flex-direction:column; gap:12px; } }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="brand-logo">
+            <div class="brand-emblem">K</div>
+            <div class="brand-text-block">
+                <span class="brand-title">KINUSAIGA ART</span>
+                <span class="brand-subtitle">Handmade Studio</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="reviews.html" class="active">Reviews</a>
+            <a href="payment.html">How to Buy</a>
+            <a href="story.html">Our Story</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section>
+    <div class="page-header">
+        <h1>Client Testimonials</h1>
+        <p>Kind words from art collectors and gift buyers across India</p>
+    </div>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I ordered a custom floral Kinusaiga piece for my parents' anniversary. The fabric layering and texture look breathtaking in person."</p>
+            </div>
+            <div class="client-info">
+                <div class="client-avatar">P</div>
+                <div class="client-details">
+                    <h4>Pooja Sharma</h4>
+                    <span>Verified Buyer • Bengaluru</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The peacock artwork exceeded all my expectations. The craftsmanship is flawless, packed securely, and arrived on time."</p>
+            </div>
+            <div class="client-info">
+                <div class="client-avatar">R</div>
+                <div class="client-details">
+                    <h4>Rajesh Venkat</h4>
+                    <span>Verified Collector • Chennai</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Directly ordering on WhatsApp was so smooth and transparent. It's rare to find authentic Japanese Kinusaiga artwork made with such care."</p>
+            </div>
+            <div class="client-info">
+                <div class="client-avatar">A</div>
+                <div class="client-details">
+                    <h4>Ananya Deshmukh</h4>
+                    <span>Verified Buyer • Pune</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="share-review-box">
+        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20share%20a%20review%20for%20my%20Kinusaiga%20artwork" target="_blank" class="btn-review">
+            ✍️ Share Your Review on WhatsApp
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-brand">KINUSAIGA ART</div>
+    <p>Handmade • Creative • Unique</p>
+    <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
