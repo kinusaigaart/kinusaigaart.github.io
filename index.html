@@ -10,26 +10,26 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* =========================================
-   COLOUR PALETTE & DESIGN TOKENS
+   COLOUR PALETTE (Royal Indigo & Champagne Gold)
 ========================================= */
 :root {
-    --bg-page: #FBF9F5;
+    --bg-page: #F8FAFC;
     --bg-surface: #FFFFFF;
-    --primary: #B2533E;            /* Warm Coral Terracotta */
-    --primary-dark: #8E3E2D;
-    --accent-gold: #D2A054;         /* Soft Honey Ochre */
-    --accent-gold-light: #F6EDE0;
-    --text-primary: #2C2623;        /* Soft Charcoal Ink */
-    --text-secondary: #70655F;
-    --border-soft: #EBE1D5;
+    --primary: #1E3A5F;            /* Deep Indigo */
+    --primary-dark: #12253D;
+    --accent-gold: #C29A38;         /* Champagne Gold */
+    --accent-gold-light: #FBF6EA;
+    --text-primary: #1D2530;
+    --text-secondary: #586575;
+    --border-soft: #E2E8F0;
     --white: #FFFFFF;
-    --shadow-sm: 0 4px 16px rgba(44, 38, 35, 0.05);
-    --shadow-md: 0 10px 28px rgba(44, 38, 35, 0.08);
-    --shadow-lg: 0 16px 40px rgba(178, 83, 62, 0.16);
+    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+    --shadow-md: 0 10px 30px rgba(30, 58, 95, 0.08);
+    --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
 }
 
 /* =========================================
@@ -53,7 +53,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .brand-name, .footer-brand {
+h1, h2, h3, .footer-brand {
     font-family: 'Playfair Display', Georgia, serif;
 }
 
@@ -67,10 +67,10 @@ section {
 }
 
 /* =========================================
-   NAVIGATION
+   NAVIGATION & CRISP HEADER BRAND
 ========================================= */
 header {
-    background: rgba(250, 246, 240, 0.94);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-soft);
     position: sticky;
@@ -82,17 +82,57 @@ header {
     max-width: 1200px;
     min-height: 80px;
     margin: auto;
-    padding: 10px 24px;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
 }
 
-.logo img {
-    width: 105px;
-    height: auto;
-    display: block;
+/* Crisp Text-Based Luxury Logo (Replaces blurry image) */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-emblem {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: 2px solid var(--accent-gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
+}
+
+.brand-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    font-size: 10.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-top: 2px;
 }
 
 nav {
@@ -110,21 +150,21 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--primary);
+    color: var(--accent-gold);
 }
 
 /* =========================================
-   HERO / HOME (With Balanced Side Columns)
+   HERO / HOME
 ========================================= */
 #home {
-    min-height: 700px;
+    min-height: 680px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 70px 5%;
+    padding: 75px 5%;
     background: 
-        radial-gradient(circle at 12% 20%, rgba(194, 142, 82, 0.12), transparent 32%),
-        radial-gradient(circle at 88% 22%, rgba(163, 67, 56, 0.10), transparent 32%),
+        radial-gradient(circle at 10% 20%, rgba(194, 154, 56, 0.10), transparent 30%),
+        radial-gradient(circle at 90% 25%, rgba(30, 58, 95, 0.08), transparent 30%),
         var(--bg-page);
 }
 
@@ -133,42 +173,51 @@ nav a:hover {
     width: 100%;
     margin: auto;
     display: grid;
-    grid-template-columns: 240px 1fr 240px;
+    grid-template-columns: 250px 1fr 250px;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
 }
 
-/* Hero Center Content */
+/* Center Hero Typography */
 .hero-center {
     text-align: center;
 }
 
-.home-logo img {
-    width: 125px;
-    margin-bottom: 14px;
-    filter: drop-shadow(0 4px 10px rgba(43, 36, 33, 0.08));
+.hero-pill {
+    display: inline-block;
+    padding: 6px 18px;
+    background: var(--accent-gold-light);
+    border: 1px solid rgba(194, 154, 56, 0.35);
+    border-radius: 30px;
+    color: #8C6A1B;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
 }
 
-.brand-name {
-    font-size: 48px;
-    letter-spacing: 5px;
+.main-brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    letter-spacing: 6px;
     font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+    color: var(--primary);
+    margin-bottom: 6px;
 }
 
 .brand-tagline {
     color: var(--accent-gold);
     font-size: 15px;
     font-weight: 600;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 .hero-center h1 {
-    font-size: 36px;
-    color: var(--primary);
+    font-size: 34px;
+    color: var(--primary-dark);
     margin-bottom: 14px;
     font-weight: 600;
     letter-spacing: -0.3px;
@@ -189,11 +238,11 @@ nav a:hover {
     margin: 20px auto;
     font-size: 16.5px;
     color: var(--text-secondary);
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .buttons {
-    margin-top: 28px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -202,7 +251,7 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 13px 32px;
     border-radius: 30px;
     font-weight: 600;
     font-size: 15px;
@@ -213,30 +262,29 @@ nav a:hover {
     background: var(--primary);
     color: var(--white);
     border: 2px solid var(--primary);
-    box-shadow: 0 6px 18px rgba(163, 67, 56, 0.22);
+    box-shadow: 0 6px 18px rgba(30, 58, 95, 0.22);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
     border-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(163, 67, 56, 0.32);
+    box-shadow: 0 8px 24px rgba(30, 58, 95, 0.30);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--text-primary);
+    background: var(--white);
+    color: var(--primary);
     border: 2px solid var(--border-soft);
 }
 
 .btn-secondary:hover {
-    background: var(--bg-surface);
     border-color: var(--accent-gold);
-    color: var(--primary);
+    color: var(--accent-gold);
     transform: translateY(-2px);
 }
 
-/* Side Info Cards (Filling empty spaces) */
+/* Balanced Side Cards */
 .hero-side {
     display: flex;
     flex-direction: column;
@@ -268,7 +316,7 @@ nav a:hover {
 .side-card h4 {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
-    color: var(--text-primary);
+    color: var(--primary);
     margin-bottom: 6px;
 }
 
@@ -288,7 +336,7 @@ nav a:hover {
 
 .section-title h2 {
     font-size: 36px;
-    color: var(--text-primary);
+    color: var(--primary);
     margin-bottom: 8px;
 }
 
@@ -302,7 +350,7 @@ nav a:hover {
     display: block;
     width: 55px;
     height: 3px;
-    background: var(--primary);
+    background: var(--accent-gold);
     margin: 14px auto 0;
     border-radius: 4px;
 }
@@ -311,7 +359,7 @@ nav a:hover {
    GALLERY
 ========================================= */
 #gallery {
-    background: #F4EFEB;
+    background: #F1F5F9;
 }
 
 .gallery-grid {
@@ -342,7 +390,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #F9EAE1, #F4DFD0);
+    background: linear-gradient(135deg, #E9EEF5, #DCE4EE);
     color: var(--primary);
     font-family: 'Playfair Display', serif;
     font-size: 18px;
@@ -351,8 +399,8 @@ nav a:hover {
 }
 
 .gallery-card:nth-child(even) .gallery-image {
-    background: linear-gradient(135deg, #EBE5DB, #DFD6C7);
-    color: var(--text-primary);
+    background: linear-gradient(135deg, #FBF6EB, #F2E7CB);
+    color: #8C6A1B;
 }
 
 .gallery-card-content {
@@ -361,7 +409,7 @@ nav a:hover {
 }
 
 .gallery-card h3 {
-    color: var(--text-primary);
+    color: var(--primary);
     margin-bottom: 6px;
     font-size: 20px;
 }
@@ -393,7 +441,7 @@ nav a:hover {
     margin-bottom: 18px;
     font-size: 17px;
     color: var(--text-primary);
-    line-height: 1.8;
+    line-height: 1.85;
 }
 
 .story-content p:last-child {
@@ -404,7 +452,7 @@ nav a:hover {
    WHY US
 ========================================= */
 #features {
-    background: #F4EFEB;
+    background: #F1F5F9;
 }
 
 .features-grid {
@@ -437,16 +485,16 @@ nav a:hover {
     margin: 0 auto 18px;
     border-radius: 50%;
     background: var(--accent-gold-light);
-    color: var(--primary);
+    color: var(--accent-gold);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    border: 1px solid rgba(194, 142, 82, 0.3);
+    border: 1px solid rgba(194, 154, 56, 0.35);
 }
 
 .feature-card h3 {
-    color: var(--text-primary);
+    color: var(--primary);
     margin-bottom: 10px;
     font-size: 20px;
 }
@@ -468,20 +516,21 @@ nav a:hover {
     margin: auto;
     padding: 60px 40px;
     text-align: center;
-    background: linear-gradient(135deg, #3C2A26 0%, #2A1D1A 100%);
+    background: linear-gradient(135deg, #182C47 0%, #0F1E31 100%);
     color: var(--white);
     border-radius: 22px;
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(194, 154, 56, 0.25);
 }
 
 .custom-box::before {
     content: "";
     position: absolute;
-    width: 220px;
-    height: 220px;
-    border: 1px solid rgba(194, 142, 82, 0.3);
+    width: 240px;
+    height: 240px;
+    border: 1px solid rgba(194, 154, 56, 0.25);
     border-radius: 50%;
     top: -80px;
     right: -60px;
@@ -490,9 +539,9 @@ nav a:hover {
 .custom-box::after {
     content: "";
     position: absolute;
-    width: 170px;
-    height: 170px;
-    border: 1px solid rgba(163, 67, 56, 0.35);
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     bottom: -70px;
     left: -40px;
@@ -501,13 +550,13 @@ nav a:hover {
 .custom-box h2 {
     font-size: 36px;
     margin-bottom: 16px;
-    color: var(--accent-gold-light);
+    color: var(--accent-gold);
 }
 
 .custom-box p {
     max-width: 680px;
     margin: auto;
-    color: #E2D7CF;
+    color: #D6E0EA;
     font-size: 16.5px;
     line-height: 1.8;
 }
@@ -515,27 +564,27 @@ nav a:hover {
 .custom-button {
     display: inline-block;
     margin-top: 30px;
-    padding: 13px 32px;
-    background: var(--primary);
-    color: white;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #C29A38, #A37E22);
+    color: #FFFFFF;
     border-radius: 30px;
     font-weight: 600;
     font-size: 15px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     transition: all 0.3s ease;
 }
 
 .custom-button:hover {
-    background: #BD4E41;
+    background: linear-gradient(135deg, #D4AA44, #B88E28);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 /* =========================================
    CONTACT
 ========================================= */
 #contact {
-    background: #F4EFEB;
+    background: #F1F5F9;
     text-align: center;
 }
 
@@ -572,8 +621,8 @@ nav a:hover {
    FOOTER & VISITOR BADGE
 ========================================= */
 footer {
-    background: #201A18;
-    color: #E0D7D0;
+    background: #0E1724;
+    color: #D6DEE8;
     text-align: center;
     padding: 48px 20px 34px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -582,14 +631,15 @@ footer {
 footer p {
     margin: 5px 0;
     font-size: 14px;
-    color: #9E938C;
+    color: #8C9BAE;
 }
 
 .footer-brand {
+    font-family: 'Cinzel', serif;
     color: var(--accent-gold);
     font-size: 22px;
     letter-spacing: 3px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 6px;
 }
 
@@ -602,7 +652,7 @@ footer p {
 
 .counter-wrapper p {
     font-size: 12px;
-    color: #B5ABA4;
+    color: #8C9BAE;
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -668,9 +718,9 @@ footer p {
         max-width: 100%;
     }
 
-    .brand-name {
-        font-size: 32px;
-        letter-spacing: 3px;
+    .main-brand-title {
+        font-size: 34px;
+        letter-spacing: 4px;
     }
 
     .hero-center h1 {
@@ -697,9 +747,15 @@ footer p {
 <!-- NAVIGATION -->
 <header>
     <div class="navbar">
-        <div class="logo">
-            <img src="https://kinusaigaart.github.io/logo.png" alt="Kinusaiga Art Logo">
-        </div>
+        <!-- Crisp Vector Logo Emblem -->
+        <a href="#home" class="brand-logo">
+            <div class="brand-emblem">K</div>
+            <div class="brand-text-block">
+                <span class="brand-title">KINUSAIGA ART</span>
+                <span class="brand-subtitle">Handmade Studio</span>
+            </div>
+        </a>
+
         <nav>
             <a href="#home">Home</a>
             <a href="#gallery">Gallery</a>
@@ -711,11 +767,11 @@ footer p {
     </div>
 </header>
 
-<!-- HOME / HERO WITH BALANCED SIDE COLUMNS -->
+<!-- HOME / HERO (No duplicate center logo) -->
 <section id="home">
     <div class="hero-wrapper">
 
-        <!-- LEFT SIDE (Fills left green space) -->
+        <!-- LEFT SIDE -->
         <div class="hero-side hero-side-left">
             <div class="side-card">
                 <span class="side-card-icon">🌸</span>
@@ -729,13 +785,11 @@ footer p {
             </div>
         </div>
 
-        <!-- CENTER CONTENT -->
+        <!-- CENTER CONTENT (Clean, No Logo Clutter) -->
         <div class="hero-center">
-            <div class="home-logo">
-                <img src="https://kinusaigaart.github.io/logo.png" alt="Kinusaiga Art">
-            </div>
+            <div class="hero-pill">Handcrafted Japanese Fabric Art</div>
 
-            <div class="brand-name">KINUSAIGA ART</div>
+            <div class="main-brand-title">KINUSAIGA ART</div>
             <div class="brand-tagline">Handmade • Creative • Unique</div>
 
             <h1>Beautiful Art, Made Affordable</h1>
@@ -753,7 +807,7 @@ footer p {
             </div>
         </div>
 
-        <!-- RIGHT SIDE (Fills right green space) -->
+        <!-- RIGHT SIDE -->
         <div class="hero-side hero-side-right">
             <div class="side-card">
                 <span class="side-card-icon">🎁</span>
