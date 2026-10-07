@@ -137,7 +137,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 22px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -947,6 +948,22 @@ footer p {
     margin-bottom: 6px;
 }
 
+.footer-policy-link {
+    margin-top: 14px;
+}
+
+.footer-policy-link a {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: underline;
+    transition: color 0.25s ease;
+}
+
+.footer-policy-link a:hover {
+    color: #FFFFFF;
+}
+
 .counter-wrapper {
     text-align: center;
     margin-top: 22px;
@@ -998,7 +1015,7 @@ footer p {
 
     nav {
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 14px;
     }
 
     .gallery-grid {
@@ -1071,6 +1088,7 @@ footer p {
             <a href="#story">Our Story</a>
             <a href="#custom">Custom Orders</a>
             <a href="#contact">Contact</a>
+            <a href="refund-policy.html">Policy</a>
         </nav>
     </div>
 </header>
@@ -1467,6 +1485,11 @@ footer p {
     <div class="footer-brand">KINUSAIGA ART</div>
     <p>Handmade • Creative • Unique</p>
     <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
+
+    <!-- Refund Policy Link in Footer -->
+    <div class="footer-policy-link">
+        <a href="refund-policy.html">Refund & Return Policy</a>
+    </div>
 
     <!-- Visitor Counter -->
     <div class="counter-wrapper">
