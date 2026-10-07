@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund & Return Policy | Kinusaiga Art</title>
+<meta name="description" content="Refund and Return Policy for Kinusaiga Art handmade creations.">
+<link rel="canonical" href="https://kinusaigaart.in/refund-policy.html">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================
+   COLOUR PALETTE (Royal Indigo & Champagne Gold)
+========================================= */
+:root {
+    --bg-page: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --primary: #1E3A5F;
+    --primary-dark: #12253D;
+    --accent-gold: #C29A38;
+    --accent-gold-light: #FBF6EA;
+    --text-primary: #1D2530;
+    --text-secondary: #586575;
+    --border-soft: #E2E8F0;
+    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+    --shadow-md: 0 10px 30px rgba(30, 58, 95, 0.08);
+    --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
+    --alert-bg: #FEF3C7;
+    --alert-border: #F59E0B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .footer-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1240px;
+    min-height: 80px;
+    margin: auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-emblem {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: 2px solid var(--accent-gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    font-size: 10.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-gold);
+}
+
+/* =========================================
+   POLICY CONTENT SECTION
+========================================= */
+.policy-section {
+    padding: 70px 7%;
+    max-width: 960px;
+    margin: auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.page-header::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 16px auto 0;
+    border-radius: 4px;
+}
+
+/* Notice Banner */
+.highlight-notice {
+    background: var(--accent-gold-light);
+    border: 1.5px solid var(--accent-gold);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 35px;
+    box-shadow: var(--shadow-sm);
+}
+
+.highlight-notice h3 {
+    color: var(--primary-dark);
+    font-size: 19px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-notice p {
+    color: #5A471C;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Policy Card Content */
+.policy-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: var(--shadow-sm);
+}
+
+.policy-block {
+    margin-bottom: 32px;
+}
+
+.policy-block:last-child {
+    margin-bottom: 0;
+}
+
+.policy-block h3 {
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.policy-block p {
+    color: var(--text-secondary);
+    font-size: 15.5px;
+    margin-bottom: 12px;
+}
+
+.policy-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.policy-block ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.policy-block ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.requirement-box {
+    background: #FFFBEB;
+    border-left: 4px solid var(--alert-border);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.requirement-box h4 {
+    color: #92400E;
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+}
+
+.requirement-box p {
+    color: #78350F;
+    font-size: 14.5px;
+    margin-bottom: 0;
+}
+
+/* Contact Action Card */
+.policy-contact-box {
+    margin-top: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #182C47 0%, #0F1E31 100%);
+    color: white;
+    padding: 38px 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(194, 154, 56, 0.3);
+    box-shadow: var(--shadow-md);
+}
+
+.policy-contact-box h3 {
+    color: var(--accent-gold);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.policy-contact-box p {
+    color: #D6E0EA;
+    font-size: 15px;
+    max-width: 580px;
+    margin: 0 auto 22px;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 30px;
+    background: #25D366;
+    color: white;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background: #1DA851;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background: #0E1724;
+    color: #D6DEE8;
+    text-align: center;
+    padding: 45px 20px 30px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand {
+    font-family: 'Cinzel', serif;
+    color: var(--accent-gold);
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 13.5px;
+    color: #8C9BAE;
+}
+
+.footer-links {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: var(--accent-gold);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    nav {
+        justify-content: center;
+    }
+    .policy-section {
+        padding: 50px 6%;
+    }
+    .page-header h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="navbar">
+        <a href="index.html" class="brand-logo">
+            <div class="brand-emblem">K</div>
+            <div class="brand-text-block">
+                <span class="brand-title">KINUSAIGA ART</span>
+                <span class="brand-subtitle">Handmade Studio</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#gallery">Gallery</a>
+            <a href="index.html#testimonials">Reviews</a>
+            <a href="index.html#payment">How to Buy</a>
+            <a href="index.html#story">Our Story</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="refund-policy.html" class="active">Policy</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN POLICY CONTENT -->
+<section class="policy-section">
+    <div class="page-header">
+        <h1>Refund & Return Policy</h1>
+        <p>Transparency, authenticity, and care for our handmade creations</p>
+    </div>
+
+    <!-- Highlight Notice -->
+    <div class="highlight-notice">
+        <h3>✦ Handcrafted Art Notice</h3>
+        <p>
+            Every piece created at <strong>Kinusaiga Art</strong> is an intricate, 100% handcrafted original made with hand-cut boards and individually tucked Japanese fabrics. Because each artwork requires substantial time, effort, and personalized craftsmanship, <strong>we follow a strict no-refund and no-return policy on all completed sales.</strong>
+        </p>
+    </div>
+
+    <!-- Policy Points Card -->
+    <div class="policy-card">
+        
+        <!-- Section 1 -->
+        <div class="policy-block">
+            <h3>1. General Sales Policy</h3>
+            <p>
+                Once an order is confirmed, packed, or dispatched, cancellations, standard returns, and refunds are <strong>not permitted</strong>. We encourage all buyers to carefully review the photos, dimensions, and product details on our website or over WhatsApp before making payment.
+            </p>
+        </div>
+
+        <!-- Section 2: Transit Damage Exception -->
+        <div class="policy-block">
+            <h3>2. Damaged in Transit (Exceptions)</h3>
+            <p>
+                We inspect every artwork thoroughly and use multi-layer shockproof bubble wrap with reinforced outer packaging. However, if an artwork arrives damaged due to postal or courier handling:
+            </p>
+            <ul>
+                <li>A <strong>replacement with another available item</strong> or a <strong>refund</strong> will only be considered if severe in-transit damage is conclusively proven.</li>
+                <li>Replacement is strictly <strong>subject to availability</strong>, as each handmade art piece is unique and cannot be mass-reproduced instantly.</li>
+                <li>If an identical piece is unavailable, you will have the option to pick an alternative artwork of equal value or receive a refund.</li>
+            </ul>
+        </div>
+
+        <!-- Section 3: Mandatory Unboxing Video -->
+        <div class="policy-block">
+            <h3>3. Mandatory Unpacking / Unboxing Video Requirement</h3>
+            <div class="requirement-box">
+                <h4>⚠️ Crucial Requirement for Damage Claims:</h4>
+                <p>
+                    A clear, continuous, uncut 360° unpacking video from start to finish is mandatory to claim any transit damage. Without an unboxing video, damage claims cannot be entertained under any circumstances.
+                </p>
+            </div>
+            <p>Your unboxing video must follow these conditions:</p>
+            <ul>
+                <li>The video must clearly show the package in its original, sealed state before any tape is cut.</li>
+                <li>The shipping label with the tracking details and recipient address must be clearly visible.</li>
+                <li>The video must be recorded in one single continuous take without cuts, edits, or pauses.</li>
+                <li>The damage to the frame or fabric artwork must be clearly pointed out as the package is opened.</li>
+            </ul>
+        </div>
+
+        <!-- Section 4: Reporting Window -->
+        <div class="policy-block">
+            <h3>4. Claim Reporting Window</h3>
+            <p>
+                Any transit damage claim along with the uncut unboxing video must be shared with us within <strong>24 hours of parcel delivery</strong>. Claims reported after 24 hours of delivery status cannot be accepted.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Contact & Resolution Box -->
+    <div class="policy-contact-box">
+        <h3>Have an Issue With Your Delivery?</h3>
+        <p>If your package arrived damaged, please share your uncut unboxing video and order details directly with our studio on WhatsApp within 24 hours.</p>
+        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20have%20an%20issue%20regarding%20my%20Kinusaiga%20Art%20parcel" target="_blank" class="btn-whatsapp">
+            <span>💬</span> Submit Video on WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-brand">KINUSAIGA ART</div>
+    <p>Handmade • Creative • Unique</p>
+    <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="refund-policy.html">Refund Policy</a>
+    </div>
+</footer>
+
+</body>
+</html>
