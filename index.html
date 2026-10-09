@@ -5,14 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kinusaiga Art | Handmade, Creative & Affordable</title>
+<meta name="description" content="Authentic handmade Japanese Kinusaiga fabric artworks for gifting, home décor and special occasions.">
 
-<meta name="description" content="Beautiful handmade Kinusaiga art for gifting, home décor and special occasions.">
+<link rel="canonical" href="https://kinusaigaart.in/">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
+/* =========================================
+   COLOUR PALETTE (Royal Indigo & Champagne Gold)
+========================================= */
+:root {
+    --bg-page: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --primary: #1E3A5F;
+    --primary-dark: #12253D;
+    --accent-gold: #C29A38;
+    --accent-gold-light: #FBF6EA;
+    --text-primary: #1D2530;
+    --text-secondary: #586575;
+    --border-soft: #E2E8F0;
+    --white: #FFFFFF;
+    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+    --shadow-md: 0 10px 30px rgba(30, 58, 95, 0.08);
+    --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
+}
 
 * {
     margin: 0;
@@ -25,10 +45,15 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #FFF8F0;
-    color: #4A2545;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg-page);
+    color: var(--text-primary);
     line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .footer-brand {
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 a {
@@ -37,164 +62,270 @@ a {
 }
 
 section {
-    padding: 80px 8%;
+    padding: 85px 7%;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
 header {
-    background: #FFF8F0;
-    border-bottom: 1px solid #C5A46D;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .navbar {
-    max-width: 1200px;
+    max-width: 1240px;
+    min-height: 80px;
     margin: auto;
-    min-height: 85px;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
 }
 
-.logo img {
-    width: 115px;
-    height: auto;
-    display: block;
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-emblem {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: 2px solid var(--accent-gold);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
+}
+
+.brand-text-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    font-size: 10.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-top: 2px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: #4A2545;
-    font-size: 15px;
+    color: var(--text-primary);
+    font-size: 14.5px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: color 0.25s ease;
 }
 
 nav a:hover {
-    color: #D99AAE;
+    color: var(--accent-gold);
 }
 
-
-/* =========================
-   HOME / HERO
-========================= */
-
+/* =========================================
+   HERO / HOME
+========================================= */
 #home {
-    min-height: 700px;
-    padding: 70px 8%;
-    background:
-        radial-gradient(circle at top right, #F3DCE3 0%, transparent 30%),
-        #FFF8F0;
+    min-height: 680px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 75px 5%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(194, 154, 56, 0.10), transparent 30%),
+        radial-gradient(circle at 90% 25%, rgba(30, 58, 95, 0.08), transparent 30%),
+        var(--bg-page);
+}
+
+.hero-wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    align-items: center;
+    gap: 32px;
+}
+
+.hero-center {
     text-align: center;
 }
 
-.hero {
-    max-width: 950px;
-    margin: auto;
+.hero-pill {
+    display: inline-block;
+    padding: 6px 18px;
+    background: var(--accent-gold-light);
+    border: 1px solid rgba(194, 154, 56, 0.35);
+    border-radius: 30px;
+    color: #8C6A1B;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
 }
 
-.home-logo img {
-    width: 145px;
-    margin-bottom: 20px;
-}
-
-.brand-name {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 58px;
+.main-brand-title {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
     letter-spacing: 6px;
-    font-weight: bold;
-    color: #4A2545;
-    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
 }
 
 .brand-tagline {
-    color: #D99AAE;
-    font-size: 19px;
-    letter-spacing: 3px;
-    margin-bottom: 28px;
-}
-
-.hero h1 {
-    font-size: 42px;
-    color: #4A2545;
+    color: var(--accent-gold);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-.hero h1::after {
-    content: "";
-    display: block;
-    width: 75px;
-    height: 3px;
-    background: #C5A46D;
-    margin: 18px auto 0;
+.hero-center h1 {
+    font-size: 34px;
+    color: var(--primary-dark);
+    margin-bottom: 14px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
 }
 
-.hero p {
-    max-width: 760px;
-    margin: 25px auto;
-    font-size: 18px;
-    color: #5D4A58;
+.hero-center h1::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 14px auto 0;
+    border-radius: 4px;
+}
+
+.hero-center p {
+    max-width: 580px;
+    margin: 20px auto;
+    font-size: 16.5px;
+    color: var(--text-secondary);
+    line-height: 1.8;
 }
 
 .buttons {
-    margin-top: 35px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
-    padding: 13px 28px;
+    padding: 13px 32px;
     border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
-    background: #4A2545;
-    color: #FFF8F0;
-    border: 2px solid #4A2545;
+    background: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+    box-shadow: 0 6px 18px rgba(30, 58, 95, 0.22);
 }
 
 .btn-primary:hover {
-    background: #D99AAE;
-    border-color: #D99AAE;
-    color: #4A2545;
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: #4A2545;
-    border: 2px solid #C5A46D;
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--border-soft);
 }
 
 .btn-secondary:hover {
-    background: #C5A46D;
-    color: white;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-2px);
 }
 
+/* Side Cards */
+.hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-/* =========================
+.side-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    padding: 22px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.side-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.side-card-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.side-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.side-card p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+/* =========================================
    SECTION TITLES
-========================= */
-
+========================================= */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -202,31 +333,30 @@ nav a:hover {
 
 .section-title h2 {
     font-size: 36px;
-    color: #4A2545;
-    margin-bottom: 10px;
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
 .section-title p {
-    color: #76616F;
-    font-size: 17px;
+    color: var(--text-secondary);
+    font-size: 16.5px;
 }
 
 .section-title::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 55px;
     height: 3px;
-    background: #D99AAE;
-    margin: 18px auto 0;
+    background: var(--accent-gold);
+    margin: 14px auto 0;
+    border-radius: 4px;
 }
 
-
-/* =========================
-   GALLERY
-========================= */
-
+/* =========================================
+   GALLERY (STORE / SALE READY)
+========================================= */
 #gallery {
-    background: #FDF1F3;
+    background: #F1F5F9;
 }
 
 .gallery-grid {
@@ -238,74 +368,420 @@ nav a:hover {
 }
 
 .gallery-card {
-    background: #FFFFFF;
-    border: 1px solid #E7D5D9;
-    border-radius: 14px;
+    background: var(--bg-surface);
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(74, 37, 69, 0.08);
-    transition: 0.3s;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
 
 .gallery-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 35px rgba(74, 37, 69, 0.14);
+    transform: translateY(-6px);
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-md);
 }
 
-.gallery-image {
-    height: 230px;
-    background: #F7E5EA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #8A9A7B;
-    font-size: 18px;
-    letter-spacing: 1px;
+.gallery-image-container {
+    height: 250px;
+    width: 100%;
+    background: #EAEFF5;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-image-container img {
+    transform: scale(1.05);
+}
+
+.art-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(30, 58, 95, 0.9);
+    color: var(--accent-gold);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
 }
 
 .gallery-card-content {
     padding: 22px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .gallery-card h3 {
-    color: #4A2545;
-    margin-bottom: 7px;
-    font-size: 21px;
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.art-meta {
+    font-size: 13px;
+    color: #8C6A1B;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 .gallery-card p {
-    color: #76616F;
-    font-size: 15px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    flex-grow: 1;
 }
 
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-soft);
+}
 
-/* =========================
+.art-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.btn-buy {
+    background: #25D366;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 24px;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-buy:hover {
+    background: #1DA851;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+/* =========================================
+   TESTIMONIALS SECTION
+========================================= */
+#testimonials {
+    background: var(--bg-page);
+}
+
+.testimonials-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.testimonial-card {
+    background: var(--bg-surface);
+    border-radius: 20px;
+    padding: 34px 28px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.stars {
+    color: #E5A93B;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 22px;
+    font-style: italic;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 16px;
+}
+
+.client-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent-gold));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.client-details h4 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+
+.client-details span {
+    font-size: 12.5px;
+    color: #8C6A1B;
+    font-weight: 600;
+}
+
+.share-review-box {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.btn-review {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--bg-surface);
+    color: var(--primary);
+    border: 1.5px solid var(--accent-gold);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-review:hover {
+    background: var(--accent-gold);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HOW TO ORDER & PAYMENT DETAILS
+========================================= */
+#payment {
+    background: #F1F5F9;
+}
+
+.payment-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.order-steps {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 36px 30px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order-steps h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.step-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.step-item:last-child {
+    margin-bottom: 0;
+}
+
+.step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-gold-light);
+    color: #8C6A1B;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-text h4 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.step-text p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.payment-card {
+    background: linear-gradient(135deg, #182C47 0%, #0F1E31 100%);
+    border: 1px solid rgba(194, 154, 56, 0.3);
+    border-radius: 22px;
+    padding: 38px 30px;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payment-card h3 {
+    color: var(--accent-gold);
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.payment-card p.subtitle {
+    color: #D6E0EA;
+    font-size: 14px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.upi-highlight-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1.5px dashed var(--accent-gold);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.upi-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.upi-id-value {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.btn-copy-upi {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: #12253D;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+}
+
+.btn-copy-upi:hover {
+    background: #E5B445;
+    transform: translateY(-2px);
+}
+
+.bank-details-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    background: rgba(194, 154, 56, 0.2);
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
    OUR STORY
-========================= */
-
+========================================= */
 #story {
-    background: #FFF8F0;
+    background: var(--bg-page);
 }
 
 .story-content {
-    max-width: 900px;
+    max-width: 820px;
     margin: auto;
     text-align: center;
+    background: var(--bg-surface);
+    padding: 44px 38px;
+    border-radius: 20px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-sm);
 }
 
 .story-content p {
     margin-bottom: 18px;
     font-size: 17px;
-    color: #5D4A58;
+    color: var(--text-primary);
+    line-height: 1.85;
 }
 
+.story-content p:last-child {
+    margin-bottom: 0;
+}
 
-/* =========================
+/* =========================================
    WHY US
-========================= */
-
+========================================= */
 #features {
-    background: #F5E9DF;
+    background: #F1F5F9;
 }
 
 .features-grid {
@@ -317,177 +793,221 @@ nav a:hover {
 }
 
 .feature-card {
-    background: #FFFDF9;
-    padding: 35px 25px;
+    background: var(--bg-surface);
+    padding: 38px 26px;
     text-align: center;
-    border-radius: 15px;
-    border: 1px solid #E1CFAE;
-    box-shadow: 0 8px 25px rgba(74, 37, 69, 0.07);
+    border-radius: 18px;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-md);
 }
 
 .feature-icon {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     margin: 0 auto 18px;
     border-radius: 50%;
-    background: #F3DCE3;
-    color: #4A2545;
+    background: var(--accent-gold-light);
+    color: var(--accent-gold);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
+    border: 1px solid rgba(194, 154, 56, 0.35);
 }
 
 .feature-card h3 {
-    color: #4A2545;
-    margin-bottom: 12px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .feature-card p {
-    color: #6B5964;
-    font-size: 15px;
+    color: var(--text-secondary);
+    font-size: 14.5px;
 }
 
-
-/* =========================
+/* =========================================
    CUSTOM ORDERS
-========================= */
-
+========================================= */
 #custom {
-    background: #FFF8F0;
+    background: var(--bg-page);
 }
 
 .custom-box {
     max-width: 950px;
     margin: auto;
-    padding: 55px 45px;
+    padding: 60px 40px;
     text-align: center;
-    background: #4A2545;
-    color: #FFF8F0;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #182C47 0%, #0F1E31 100%);
+    color: var(--white);
+    border-radius: 22px;
     position: relative;
     overflow: hidden;
-}
-
-.custom-box::before {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border: 1px solid #C5A46D;
-    border-radius: 50%;
-    top: -80px;
-    right: -60px;
-}
-
-.custom-box::after {
-    content: "";
-    position: absolute;
-    width: 130px;
-    height: 130px;
-    border: 1px solid #D99AAE;
-    border-radius: 50%;
-    bottom: -65px;
-    left: -45px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(194, 154, 56, 0.25);
 }
 
 .custom-box h2 {
-    font-size: 34px;
-    margin-bottom: 18px;
-    color: #FFF8F0;
+    font-size: 36px;
+    margin-bottom: 16px;
+    color: var(--accent-gold);
 }
 
 .custom-box p {
-    max-width: 720px;
+    max-width: 680px;
     margin: auto;
-    color: #F5E5EA;
-    font-size: 17px;
+    color: #D6E0EA;
+    font-size: 16.5px;
+    line-height: 1.8;
 }
 
 .custom-button {
     display: inline-block;
-    margin-top: 28px;
-    padding: 13px 30px;
-    background: #D99AAE;
-    color: #4A2545;
+    margin-top: 30px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #C29A38, #A37E22);
+    color: #FFFFFF;
     border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
 }
 
 .custom-button:hover {
-    background: #C5A46D;
-    color: white;
+    background: linear-gradient(135deg, #D4AA44, #B88E28);
+    transform: translateY(-2px);
 }
 
-
-/* =========================
+/* =========================================
    CONTACT
-========================= */
-
+========================================= */
 #contact {
-    background: #FDF1F3;
+    background: #F1F5F9;
     text-align: center;
 }
 
 .contact-content {
-    max-width: 700px;
+    max-width: 650px;
     margin: auto;
 }
 
 .contact-content p {
-    color: #6B5964;
-    font-size: 17px;
-    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 16.5px;
+    margin-bottom: 22px;
 }
 
 .whatsapp-button {
     display: inline-block;
-    margin-top: 15px;
-    padding: 14px 32px;
-    background: #4A2545;
-    color: #FFF8F0;
+    padding: 13px 32px;
+    background: #25D366;
+    color: white;
     border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+    transition: all 0.3s ease;
 }
 
 .whatsapp-button:hover {
-    background: #D99AAE;
-    color: #4A2545;
+    background: #20BA5A;
+    transform: translateY(-2px);
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
+/* =========================================
+   FOOTER & VISITOR BADGE
+========================================= */
 footer {
-    background: #32192F;
-    color: #F9EDEF;
+    background: #0E1724;
+    color: #D6DEE8;
     text-align: center;
-    padding: 30px 20px;
+    padding: 48px 20px 34px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 footer p {
     margin: 5px 0;
     font-size: 14px;
+    color: #8C9BAE;
 }
 
 .footer-brand {
-    color: #D99AAE;
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    color: var(--accent-gold);
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
+.footer-policy-link {
+    margin-top: 14px;
+}
 
-/* =========================
-   MOBILE
-========================= */
+.footer-policy-link a {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: underline;
+    transition: color 0.25s ease;
+}
 
-@media (max-width: 900px) {
+.footer-policy-link a:hover {
+    color: #FFFFFF;
+}
 
+.counter-wrapper {
+    text-align: center;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.counter-wrapper p {
+    font-size: 12px;
+    color: #8C9BAE;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   RESPONSIVENESS
+========================================= */
+@media (max-width: 1040px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .hero-side {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .side-card {
+        flex: 1;
+        max-width: 320px;
+    }
+
+    .payment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
     .navbar {
         padding: 15px 25px;
         flex-direction: column;
@@ -495,17 +1015,7 @@ footer p {
 
     nav {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .brand-name {
-        font-size: 43px;
-        letter-spacing: 4px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
+        gap: 14px;
     }
 
     .gallery-grid {
@@ -516,534 +1026,491 @@ footer p {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 650px) {
     section {
         padding: 60px 6%;
     }
 
     #home {
-        padding: 55px 6%;
+        padding: 50px 6%;
     }
 
-    .logo img {
-        width: 100px;
+    .hero-side {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .home-logo img {
-        width: 120px;
+    .side-card {
+        width: 100%;
+        max-width: 100%;
     }
 
-    .brand-name {
-        font-size: 31px;
-        letter-spacing: 3px;
-    }
-
-    .brand-tagline {
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
+    .main-brand-title {
+        font-size: 34px;
+        letter-spacing: 4px;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr;
     }
 
-    .section-title h2 {
-        font-size: 30px;
-    }
-
-    .custom-box {
-        padding: 40px 25px;
-    }
-
-    .custom-box h2 {
-        font-size: 28px;
+    .upi-id-value {
+        font-size: 17px;
     }
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
+<!-- NAVIGATION -->
 <header>
-
     <div class="navbar">
-
-        <div class="logo">
-            <img
-                src="https://kinusaigaart.github.io/logo.png"
-                alt="Kinusaiga Art Logo">
-        </div>
+        <a href="#home" class="brand-logo">
+            <div class="brand-emblem">K</div>
+            <div class="brand-text-block">
+                <span class="brand-title">KINUSAIGA ART</span>
+                <span class="brand-subtitle">Handmade Studio</span>
+            </div>
+        </a>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#payment">How to Buy</a>
             <a href="#story">Our Story</a>
-            <a href="#features">Why Us</a>
             <a href="#custom">Custom Orders</a>
             <a href="#contact">Contact</a>
+            <a href="refund-policy.html">Policy</a>
         </nav>
-
     </div>
-
 </header>
 
-
-
-<!-- =========================
-     HOME
-========================= -->
-
+<!-- HERO -->
 <section id="home">
-
-    <div class="hero">
-
-        <div class="home-logo">
-            <img
-                src="https://kinusaigaart.github.io/logo.png"
-                alt="Kinusaiga Art">
+    <div class="hero-wrapper">
+        <div class="hero-side hero-side-left">
+            <div class="side-card">
+                <span class="side-card-icon">🌸</span>
+                <h4>Kinusaiga Art</h4>
+                <p>Traditional Japanese textile art created by tucking fabric into carved wood.</p>
+            </div>
+            <div class="side-card">
+                <span class="side-card-icon">🧵</span>
+                <h4>100% Handcrafted</h4>
+                <p>Every single piece is made stitchless, with patience, precision & passion.</p>
+            </div>
         </div>
 
-        <div class="brand-name">
-            KINUSAIGA ART
+        <div class="hero-center">
+            <div class="hero-pill">Handcrafted Japanese Fabric Art</div>
+            <div class="main-brand-title">KINUSAIGA ART</div>
+            <div class="brand-tagline">Handmade • Creative • Unique</div>
+
+            <h1>Beautiful Art, Made Affordable</h1>
+
+            <p>
+                Discover beautiful handmade Kinusaiga art created with
+                creativity, patience and attention to detail. We create
+                innovative, attractive and cost-effective artworks for
+                gifting, home décor and special occasions.
+            </p>
+
+            <div class="buttons">
+                <a href="#gallery" class="btn btn-primary">Browse & Buy Art</a>
+                <a href="#custom" class="btn btn-secondary">Custom Orders</a>
+            </div>
         </div>
 
-        <div class="brand-tagline">
-            Handmade • Creative • Unique
+        <div class="hero-side hero-side-right">
+            <div class="side-card">
+                <span class="side-card-icon">🎁</span>
+                <h4>Bespoke Gifting</h4>
+                <p>Unforgettable memorable gifts tailored for weddings, birthdays & celebrations.</p>
+            </div>
+            <div class="side-card">
+                <span class="side-card-icon">✦</span>
+                <h4>Direct Studio Sale</h4>
+                <p>Buy authentic handcrafted pieces directly from the artist with doorstep delivery.</p>
+            </div>
         </div>
-
-        <h1>
-            Beautiful Art, Made Affordable
-        </h1>
-
-        <p>
-            Discover beautiful handmade Kinusaiga art created with
-            creativity, patience and attention to detail. We create
-            innovative, attractive and cost-effective artworks for
-            gifting, home décor and special occasions.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#gallery" class="btn btn-primary">
-                Explore Our Art
-            </a>
-
-            <a href="#custom" class="btn btn-secondary">
-                Custom Orders
-            </a>
-
-        </div>
-
     </div>
-
 </section>
 
-
-
-<!-- =========================
-     GALLERY
-========================= -->
-
+<!-- GALLERY & SHOP -->
 <section id="gallery">
-
     <div class="section-title">
-
-        <h2>
-            Our Gallery
-        </h2>
-
-        <p>
-            A glimpse of our handmade Kinusaiga creations
-        </p>
-
+        <h2>Gallery & Available Artworks</h2>
+        <p>Click "Buy Now" to order directly via WhatsApp or confirm customization</p>
     </div>
-
 
     <div class="gallery-grid">
-
-
+        <!-- Artwork 1 -->
         <div class="gallery-card">
-
-            <div class="gallery-image">
-                Kinusaiga Artwork
+            <div class="gallery-image-container">
+                <span class="art-tag">In Stock</span>
+                <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=80" alt="Floral Harmony Kinusaiga">
             </div>
-
             <div class="gallery-card-content">
-
-                <h3>
-                    Kinusaiga Art
-                </h3>
-
-                <p>
-                    Beautiful handcrafted fabric artwork.
-                </p>
-
+                <h3>Floral Harmony</h3>
+                <div class="art-meta">Size: 10" x 12" • Framed Fabric</div>
+                <p>Hand-tucked silk fabric floral art with intricate Japanese textile accents.</p>
+                <div class="card-footer">
+                    <span class="art-price">₹1,499</span>
+                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20want%20to%20order%20the%20Floral%20Harmony%20Kinusaiga%20Art%20(Rs.1499)" target="_blank" class="btn-buy">
+                        Buy Now ➔
+                    </a>
+                </div>
             </div>
-
         </div>
 
-
-
+        <!-- Artwork 2 -->
         <div class="gallery-card">
-
-            <div class="gallery-image">
-                Handmade Creation
+            <div class="gallery-image-container">
+                <span class="art-tag">In Stock</span>
+                <img src="https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=600&auto=format&fit=crop&q=80" alt="Peacock Splendor">
             </div>
-
             <div class="gallery-card-content">
-
-                <h3>
-                    Handmade Creation
-                </h3>
-
-                <p>
-                    Carefully crafted with patience and creativity.
-                </p>
-
+                <h3>Peacock Splendor</h3>
+                <div class="art-meta">Size: 12" x 16" • Traditional Motif</div>
+                <p>Vibrant peacock made using layered brocade fabric with subtle golden highlights.</p>
+                <div class="card-footer">
+                    <span class="art-price">₹2,299</span>
+                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20want%20to%20order%20the%20Peacock%20Splendor%20Kinusaiga%20Art%20(Rs.2299)" target="_blank" class="btn-buy">
+                        Buy Now ➔
+                    </a>
+                </div>
             </div>
-
         </div>
 
-
-
+        <!-- Artwork 3 -->
         <div class="gallery-card">
-
-            <div class="gallery-image">
-                Creative Art
+            <div class="gallery-image-container">
+                <span class="art-tag">In Stock</span>
+                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&auto=format&fit=crop&q=80" alt="Japanese Landscape">
             </div>
-
             <div class="gallery-card-content">
-
-                <h3>
-                    Creative Art
-                </h3>
-
-                <p>
-                    Unique designs made to bring joy and beauty.
-                </p>
-
+                <h3>Zen Blossom Landscape</h3>
+                <div class="art-meta">Size: 12" x 14" • Framed</div>
+                <p>Peaceful landscape capturing cherry blossoms against subtle mountains.</p>
+                <div class="card-footer">
+                    <span class="art-price">₹1,850</span>
+                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20want%20to%20order%20the%20Zen%20Blossom%20Landscape%20(Rs.1850)" target="_blank" class="btn-buy">
+                        Buy Now ➔
+                    </a>
+                </div>
             </div>
-
         </div>
 
-
-
+        <!-- Artwork 4 -->
         <div class="gallery-card">
-
-            <div class="gallery-image">
-                Decorative Art
+            <div class="gallery-image-container">
+                <span class="art-tag">Custom Order</span>
+                <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&auto=format&fit=crop&q=80" alt="Divine Ganesh Fabric Art">
             </div>
-
             <div class="gallery-card-content">
-
-                <h3>
-                    Decorative Art
-                </h3>
-
-                <p>
-                    Perfect for adding character to your home.
-                </p>
-
+                <h3>Divine Grace (Ganesh)</h3>
+                <div class="art-meta">Size: 14" x 18" • Auspicious Décor</div>
+                <p>Intricate spiritual art crafted with auspicious silk fabrics, perfect for home entry.</p>
+                <div class="card-footer">
+                    <span class="art-price">₹2,800</span>
+                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20ordering%20the%20Divine%20Grace%20Ganesh%20Art" target="_blank" class="btn-buy">
+                        Buy Now ➔
+                    </a>
+                </div>
             </div>
-
         </div>
 
-
-
+        <!-- Artwork 5 -->
         <div class="gallery-card">
-
-            <div class="gallery-image">
-                Gift Art
+            <div class="gallery-image-container">
+                <span class="art-tag">In Stock</span>
+                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80" alt="Sparrow on Branch">
             </div>
-
             <div class="gallery-card-content">
-
-                <h3>
-                    Gift Art
-                </h3>
-
-                <p>
-                    Thoughtful handmade gifts for special occasions.
-                </p>
-
+                <h3>Morning Songbirds</h3>
+                <div class="art-meta">Size: 8" x 10" • Table / Wall Mount</div>
+                <p>Minimalist cute fabric birds perched on textured branches with satin sheen.</p>
+                <div class="card-footer">
+                    <span class="art-price">₹1,199</span>
+                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20want%20to%20order%20the%20Morning%20Songbirds%20Kinusaiga%20Art%20(Rs.1199)" target="_blank" class="btn-buy">
+                        Buy Now ➔
+                    </a>
+                </div>
             </div>
-
         </div>
 
-
-
+        <!-- Artwork 6 -->
         <div class="gallery-card">
-
-            <div class="gallery-image">
-                Customized Art
+            <div class="gallery-image-container">
+                <span class="art-tag">Custom Order</span>
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&auto=format&fit=crop&q=80" alt="Personalised Portrait / Gift">
             </div>
-
             <div class="gallery-card-content">
-
-                <h3>
-                    Customized Art
-                </h3>
-
-                <p>
-                    Personalised creations made specially for you.
-                </p>
-
+                <h3>Personalised Keepsake</h3>
+                <div class="art-meta">Custom Size • Choice of Colors</div>
+                <p>Commission a unique piece based on your favorite photo, couple portrait, or theme.</p>
+                <div class="card-footer">
+                    <span class="art-price">From ₹1,999</span>
+                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20commission%20a%20Personalised%20Kinusaiga%20Artwork" target="_blank" class="btn-buy">
+                        Customise ➔
+                    </a>
+                </div>
             </div>
-
         </div>
-
-
     </div>
-
 </section>
 
-
-
-<!-- =========================
-     OUR STORY
-========================= -->
-
-<section id="story">
-
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials">
     <div class="section-title">
-
-        <h2>
-            Our Brand Story
-        </h2>
-
-        <p>
-            Art created with imagination and heart
-        </p>
-
+        <h2>Customer Testimonials</h2>
+        <p>Kind words from art lovers and collectors across India</p>
     </div>
 
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "I ordered a custom floral Kinusaiga piece for my parents' anniversary. The fabric layering and texture look breathtaking in person. It feels so unique compared to regular paintings!"
+                </p>
+            </div>
+            <div class="client-info">
+                <div class="client-avatar">P</div>
+                <div class="client-details">
+                    <h4>Pooja Sharma</h4>
+                    <span>Verified Buyer • Bengaluru</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "The peacock artwork exceeded all my expectations. The craftsmanship is flawless, packed securely, and arrived on time. Highly recommended for premium home décor."
+                </p>
+            </div>
+            <div class="client-info">
+                <div class="client-avatar">R</div>
+                <div class="client-details">
+                    <h4>Rajesh Venkat</h4>
+                    <span>Verified Collector • Chennai</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Directly ordering on WhatsApp was so smooth and transparent. It's rare to find authentic Japanese Kinusaiga artwork made with such care and reasonable pricing."
+                </p>
+            </div>
+            <div class="client-info">
+                <div class="client-avatar">A</div>
+                <div class="client-details">
+                    <h4>Ananya Deshmukh</h4>
+                    <span>Verified Buyer • Pune</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="share-review-box">
+        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20share%20a%20review%20for%20my%20Kinusaiga%20artwork" target="_blank" class="btn-review">
+            ✍️ Share Your Review on WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- HOW TO ORDER & PAYMENT DETAILS -->
+<section id="payment">
+    <div class="section-title">
+        <h2>How to Order & Payment</h2>
+        <p>Simple, secure and transparent ordering direct from the artist</p>
+    </div>
+
+    <div class="payment-container">
+        <!-- 3 Simple Steps -->
+        <div class="order-steps">
+            <h3>Ordering in 3 Simple Steps</h3>
+            
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-text">
+                    <h4>Choose Your Artwork</h4>
+                    <p>Browse our gallery and click "Buy Now" on WhatsApp to confirm piece availability & shipping details.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-text">
+                    <h4>Make Payment via UPI</h4>
+                    <p>Transfer using any UPI app (GPay, PhonePe, Paytm, BHIM) to our registered UPI ID.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-text">
+                    <h4>Share Screenshot & Receive Art</h4>
+                    <p>Send your payment confirmation and full delivery address on WhatsApp. Your piece will be safely packed & shipped.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Card -->
+        <div class="payment-card">
+            <h3>Direct UPI Payment</h3>
+            <p class="subtitle">Pay conveniently with Google Pay, PhonePe, Paytm, or any UPI app</p>
+
+            <div class="upi-highlight-box">
+                <div class="upi-label">Official Studio UPI ID</div>
+                <div class="upi-id-value" id="upiText">aksnsdrhuf@kotak</div>
+                <div>
+                    <button class="btn-copy-upi" onclick="copyUPI()">📋 Copy UPI ID</button>
+                </div>
+            </div>
+
+            <div class="bank-details-box">
+                <p style="color: #E2E8F0; font-size: 14px; margin-bottom: 4px;">Direct Bank Account (NEFT / IMPS)</p>
+                <div class="coming-soon-badge">Details Coming Soon</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUR STORY -->
+<section id="story">
+    <div class="section-title">
+        <h2>Our Brand Story</h2>
+        <p>Art created with imagination and heart</p>
+    </div>
 
     <div class="story-content">
-
         <p>
             Kinusaiga Art is inspired by the beauty of handmade
             craftsmanship and the endless possibilities of fabric.
         </p>
-
         <p>
             Every artwork is carefully designed and created by hand,
             turning simple materials into beautiful decorative pieces.
         </p>
-
         <p>
             Our aim is to make creative and attractive Kinusaiga art
             accessible to everyone without compromising on the joy
             of handmade artistry.
         </p>
-
         <p>
             Whether it is a gift, a home decoration or a personalised
             creation, we believe that every piece should have its own
             story.
         </p>
-
     </div>
-
 </section>
 
-
-
-<!-- =========================
-     WHY US
-========================= -->
-
+<!-- WHY US -->
 <section id="features">
-
     <div class="section-title">
-
-        <h2>
-            Why Choose Us?
-        </h2>
-
-        <p>
-            Handmade with creativity, care and attention to detail
-        </p>
-
+        <h2>Why Choose Us?</h2>
+        <p>Handmade with creativity, care and attention to detail</p>
     </div>
-
 
     <div class="features-grid">
-
-
         <div class="feature-card">
-
-            <div class="feature-icon">
-                ✦
-            </div>
-
-            <h3>
-                Handmade
-            </h3>
-
-            <p>
-                Each artwork is carefully created by hand with
-                patience and attention to detail.
-            </p>
-
+            <div class="feature-icon">✦</div>
+            <h3>Handmade</h3>
+            <p>Each artwork is carefully created by hand with patience and attention to detail.</p>
         </div>
 
-
-
         <div class="feature-card">
-
-            <div class="feature-icon">
-                ♡
-            </div>
-
-            <h3>
-                Unique Designs
-            </h3>
-
-            <p>
-                Creative designs that make every artwork
-                special and different.
-            </p>
-
+            <div class="feature-icon">♡</div>
+            <h3>Unique Designs</h3>
+            <p>Creative designs that make every artwork special and different.</p>
         </div>
 
-
-
         <div class="feature-card">
-
-            <div class="feature-icon">
-                ◆
-            </div>
-
-            <h3>
-                Affordable
-            </h3>
-
-            <p>
-                Beautiful handmade art at a cost that makes
-                creative gifting accessible.
-            </p>
-
+            <div class="feature-icon">◆</div>
+            <h3>Affordable</h3>
+            <p>Beautiful handmade art at a cost that makes creative gifting accessible.</p>
         </div>
-
-
     </div>
-
 </section>
 
-
-
-<!-- =========================
-     CUSTOM ORDERS
-========================= -->
-
+<!-- CUSTOM ORDERS -->
 <section id="custom">
-
     <div class="custom-box">
-
-        <h2>
-            Create Something Special
-        </h2>
-
+        <h2>Create Something Special</h2>
         <p>
             Looking for a unique gift or a special artwork?
             We provide customized Kinusaiga art based on your
             requirements, theme, occasion or personal idea.
         </p>
-
-        <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            class="custom-button">
-
+        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20custom%20order" target="_blank" class="custom-button">
             Discuss Your Custom Order
-
         </a>
-
     </div>
-
 </section>
 
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
+<!-- CONTACT -->
 <section id="contact">
-
     <div class="section-title">
-
-        <h2>
-            Get In Touch
-        </h2>
-
-        <p>
-            Let us create something beautiful for you
-        </p>
-
+        <h2>Get In Touch</h2>
+        <p>Let us create something beautiful for you</p>
     </div>
 
-
     <div class="contact-content">
-
         <p>
             For artwork enquiries, gifting requirements,
             custom orders and collaborations, contact us directly.
         </p>
-
-        <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            class="whatsapp-button">
-
+        <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-button">
             Chat With Us on WhatsApp
-
         </a>
-
     </div>
-
 </section>
 
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer>
+    <div class="footer-brand">KINUSAIGA ART</div>
+    <p>Handmade • Creative • Unique</p>
+    <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
 
-    <div class="footer-brand">
-        KINUSAIGA ART
+    <!-- Refund Policy Link in Footer -->
+    <div class="footer-policy-link">
+        <a href="refund-policy.html">Refund & Return Policy</a>
     </div>
 
-    <p>
-        Handmade • Creative • Unique
-    </p>
-
-    <p>
-        © 2026 Kinusaiga Art. All Rights Reserved.
-    </p>
-
+    <!-- Visitor Counter -->
+    <div class="counter-wrapper">
+        <p>Total Visitors</p>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=kinusaigaart.in" alt="Visitor Count" />
+    </div>
 </footer>
 
+<!-- Copy UPI Script -->
+<script>
+function copyUPI() {
+    const upi = document.getElementById("upiText").innerText;
+    navigator.clipboard.writeText(upi).then(() => {
+        const btn = document.querySelector(".btn-copy-upi");
+        btn.innerText = "✓ Copied to Clipboard!";
+        setTimeout(() => {
+            btn.innerText = "📋 Copy UPI ID";
+        }, 2500);
+    });
+}
+</script>
 
 </body>
 </html>
