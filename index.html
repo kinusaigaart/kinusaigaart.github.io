@@ -81,7 +81,7 @@ header {
 }
  
 .navbar {
-    max-width: 1240px;
+    max-width: 1280px;
     min-height: 80px;
     margin: auto;
     padding: 12px 24px;
@@ -140,13 +140,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
     flex-wrap: wrap;
 }
  
 nav a {
     color: var(--text-primary);
-    font-size: 14.5px;
+    font-size: 14px;
     font-weight: 600;
     transition: color 0.25s ease;
 }
@@ -356,6 +356,35 @@ nav a:hover {
 }
  
 /* =========================================
+   NEW ARRIVALS SECTION
+========================================= */
+#new-arrivals {
+    background: var(--bg-page);
+}
+ 
+.new-arrival-banner {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background: var(--bg-surface);
+    border: 1px dashed var(--accent-gold);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+ 
+.new-arrival-banner h3 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+ 
+.new-arrival-banner p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+ 
+/* =========================================
    GALLERY (STORE / SALE READY)
 ========================================= */
 #gallery {
@@ -487,14 +516,6 @@ nav a:hover {
     background: #1DA851;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
-}
-
-.btn-buy.btn-customise {
-    background: #1E3A5F;
-}
-.btn-buy.btn-customise:hover {
-    background: #12253D;
-    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.35);
 }
  
 /* =========================================
@@ -966,22 +987,6 @@ footer p {
     margin-bottom: 6px;
 }
  
-.footer-policy-link {
-    margin-top: 14px;
-}
- 
-.footer-policy-link a {
-    color: var(--accent-gold);
-    font-weight: 600;
-    font-size: 13.5px;
-    text-decoration: underline;
-    transition: color 0.25s ease;
-}
- 
-.footer-policy-link a:hover {
-    color: #FFFFFF;
-}
- 
 .counter-wrapper {
     text-align: center;
     margin-top: 22px;
@@ -1100,13 +1105,14 @@ footer p {
  
         <nav>
             <a href="#home">Home</a>
+            <a href="#new-arrivals">New Arrival</a>
             <a href="#gallery">Gallery</a>
             <a href="#testimonials">Reviews</a>
             <a href="#payment">How to Buy</a>
             <a href="#story">Our Story</a>
             <a href="#custom">Custom Orders</a>
             <a href="#contact">Contact</a>
-            <a href="refund-policy.html">Policy</a>
+            <a href="refund-policy.html">Refund and Return Policy</a>
         </nav>
     </div>
 </header>
@@ -1162,6 +1168,24 @@ footer p {
     </div>
 </section>
  
+<!-- NEW ARRIVALS -->
+<section id="new-arrivals">
+    <div class="section-title">
+        <h2>New Arrivals</h2>
+        <p>Fresh additions from our studio workshop</p>
+    </div>
+ 
+    <div class="new-arrival-banner">
+        <h3>✨ New Collection Dropping Soon</h3>
+        <p>Our upcoming creations are currently on the craft table. Stay connected on WhatsApp to get exclusive early previews and custom reservation options.</p>
+        <div style="margin-top: 20px;">
+            <a href="https://wa.me/917507807673?text=Hello%2C%20I%20want%20to%20get%20early%20updates%20on%20New%20Arrivals" target="_blank" class="btn btn-primary">
+                Get New Arrival Alerts on WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- GALLERY & SHOP -->
 <section id="gallery">
     <div class="section-title">
@@ -1182,7 +1206,7 @@ footer p {
                 <p>Hand-tucked Japanese textile creation with subtle concentric layers and elegant texture.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,100</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%202D%20ECHO%20Kinusaiga%20Art%20(Rs.2100)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%202D%20ECHO%20Kinusaiga%20Art%20(Rs.2100)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1201,7 +1225,7 @@ footer p {
                 <p>Vibrant fire motif woven with warm silk fabrics, highlighting depth and radiant energy.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,450</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Flame%20Art%20Kinusaiga%20Art%20(Rs.2450)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Flame%20Art%20Kinusaiga%20Art%20(Rs.2450)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1220,7 +1244,7 @@ footer p {
                 <p>Graceful botanical blossom created using hand-tucked fabric contours and floral shades.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,200</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Flower%20Kinusaiga%20Art%20(Rs.2200)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Flower%20Kinusaiga%20Art%20(Rs.2200)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1239,7 +1263,7 @@ footer p {
                 <p>Unique artistic interpretation capturing intricate internal forms with fine silk textiles.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,350</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Gastric%20Scan%20Kinusaiga%20Art%20(Rs.2350)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Gastric%20Scan%20Kinusaiga%20Art%20(Rs.2350)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1258,7 +1282,7 @@ footer p {
                 <p>Detailed anatomical abstraction handcrafted with delicate fabric inlays and gradients.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,300</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Lung%20Scan%20Kinusaiga%20Art%20(Rs.2300)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Lung%20Scan%20Kinusaiga%20Art%20(Rs.2300)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1277,7 +1301,7 @@ footer p {
                 <p>Warm morning landscape composed with shimmering gold and pastel fabric textures.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,250</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Sunrise%201%20Kinusaiga%20Art%20(Rs.2250)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Sunrise%201%20Kinusaiga%20Art%20(Rs.2250)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1296,7 +1320,7 @@ footer p {
                 <p>Radiant dawn composition crafted with vivid fabric contrast and horizon details.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,400</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Sunrise%202%20Kinusaiga%20Art%20(Rs.2400)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Sunrise%202%20Kinusaiga%20Art%20(Rs.2400)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1315,7 +1339,7 @@ footer p {
                 <p>Thought-provoking conceptual design created through fine stitchless Japanese fabric inlays.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,500</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20The%20Mind%20Kinusaiga%20Art%20(Rs.2500)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20The%20Mind%20Kinusaiga%20Art%20(Rs.2500)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1334,7 +1358,7 @@ footer p {
                 <p>Celestial star motif crafted using deep tones contrasted with radiant champagne fabric.</p>
                 <div class="card-footer">
                     <span class="art-price">₹2,150</span>
-                    <a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20The%20Star%20Kinusaiga%20Art%20(Rs.2150)" target="_blank" class="btn-buy">
+                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20The%20Star%20Kinusaiga%20Art%20(Rs.2150)" target="_blank" class="btn-buy">
                         Order Similar ➔
                     </a>
                 </div>
@@ -1401,7 +1425,7 @@ footer p {
     </div>
  
     <div class="share-review-box">
-        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20share%20a%20review%20for%20my%20Kinusaiga%20artwork" target="_blank" class="btn-review">
+        <a href="https://wa.me/917507807673?text=Hello%2C%20I%20would%20like%20to%20share%20a%20review%20for%20my%20Kinusaiga%20artwork" target="_blank" class="btn-review">
             ✍️ Share Your Review on WhatsApp
         </a>
     </div>
@@ -1530,7 +1554,7 @@ footer p {
             We provide customized Kinusaiga art based on your
             requirements, theme, occasion or personal idea.
         </p>
-        <a href="https://wa.me/919999999999?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20custom%20order" target="_blank" class="custom-button">
+        <a href="https://wa.me/917507807673?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20custom%20order" target="_blank" class="custom-button">
             Discuss Your Custom Order
         </a>
     </div>
@@ -1559,11 +1583,6 @@ footer p {
     <div class="footer-brand">KINUSAIGA ART</div>
     <p>Handmade • Creative • Unique</p>
     <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
- 
-    <!-- Refund Policy Link in Footer -->
-    <div class="footer-policy-link">
-        <a href="refund-policy.html">Refund & Return Policy</a>
-    </div>
  
     <!-- Visitor Counter -->
     <div class="counter-wrapper">
