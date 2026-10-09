@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art Gallery & Store</title>
+  <title>Artisan Studio | Handcrafted Art & Decor</title>
   <style>
     :root {
-      --bg-color: #f7f5f0;
+      --bg-page: #f9f8f6;
       --card-bg: #ffffff;
       --text-main: #1f1f1f;
-      --text-muted: #555555;
+      --text-muted: #666666;
+      --accent: #222222;
+      --accent-hover: #444444;
+      --border-color: #e5e2dc;
       --frame-border: #111111;
-      --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --transition: all 0.25s ease-in-out;
     }
 
     * {
@@ -21,127 +26,453 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-page);
       color: var(--text-main);
-      padding: 40px 20px;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    header {
+    /* --- Announcement Bar --- */
+    .announcement-bar {
+      background-color: #111111;
+      color: #ffffff;
+      font-size: 0.85rem;
       text-align: center;
-      margin-bottom: 40px;
+      padding: 8px 16px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
-    header h1 {
-      font-size: 2.2rem;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
+    /* --- Header & Navigation --- */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    header p {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
-
-    .gallery-container {
-      max-width: 1200px;
+    .nav-container {
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cart-btn {
+      position: relative;
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .cart-btn:hover {
+      background: #f1efe9;
+    }
+
+    .cart-badge {
+      background: #111111;
+      color: #ffffff;
+      font-size: 0.75rem;
+      border-radius: 10px;
+      padding: 2px 7px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-page) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+
+    /* --- Filter & Toolbar --- */
+    .toolbar-container {
+      max-width: 1280px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .search-box input {
+      padding: 10px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      min-width: 260px;
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: #111;
+    }
+
+    .filter-options select {
+      padding: 10px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background: #ffffff;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* --- Main Gallery Section --- */
+    main {
+      flex: 1;
+      max-width: 1280px;
+      width: 100%;
+      margin: 30px auto;
+      padding: 0 24px;
+    }
+
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 32px;
     }
 
-    .gallery-card {
+    /* Card styling (preserved for when you add items) */
+    .product-card {
       background: var(--card-bg);
-      border-radius: 4px;
-      box-shadow: var(--shadow);
-      padding: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
     }
 
-    .gallery-card:hover {
+    .product-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: var(--shadow-md);
     }
 
-    .image-wrapper {
-      position: relative;
+    .frame-wrapper {
       width: 100%;
       aspect-ratio: 1 / 1;
-      background-color: #eae6df;
+      background: #eae7e1;
       border: 12px solid var(--frame-border);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+      position: relative;
+      margin-bottom: 20px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
     }
 
-    .image-wrapper img {
+    .frame-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .card-details {
+    .card-info {
       width: 100%;
     }
 
     .product-title {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .product-price {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--text-main);
+      color: #222222;
+      margin-bottom: 16px;
     }
 
-    .empty-state {
+    .add-to-cart-btn {
+      width: 100%;
+      padding: 10px;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .add-to-cart-btn:hover {
+      background: #333333;
+    }
+
+    /* Empty State (Shown currently) */
+    .empty-gallery {
       grid-column: 1 / -1;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
+      background: #ffffff;
+      border: 2px dashed var(--border-color);
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .empty-gallery h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .empty-gallery p {
       color: var(--text-muted);
-      font-size: 1.1rem;
-      border: 2px dashed #d5d0c7;
-      border-radius: 8px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* --- Cart Modal / Drawer --- */
+    .cart-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 200;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      background: #ffffff;
+      z-index: 201;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s ease;
+    }
+
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .cart-drawer-overlay.open {
+      display: block;
+      opacity: 1;
+    }
+
+    .cart-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .close-cart-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .cart-items {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
+      background: #fafafa;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 12px;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Product Gallery</h1>
-    <p>Handcrafted Art Collection</p>
-  </header>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Complimentary insured shipping on all framed collection artworks
+  </div>
 
-  <main class="gallery-container">
-    <!-- All previous images, titles, and prices have been cleared -->
-    
-    <!-- TEMPLATE ITEM (Uncomment and duplicate as needed):
-    <div class="gallery-card">
-      <div class="image-wrapper">
-        <img src="path/to/image.jpg" alt="Artwork Title" />
-      </div>
-      <div class="card-details">
-        <h2 class="product-title">Artwork Title</h2>
-        <p class="product-price">(Price – ₹0,000 + GST)</p>
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-logo">Artisan Originals</a>
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCartBtn" onclick="toggleCart(true)">
+          🛒 Cart <span class="cart-badge" id="cartCount">0</span>
+        </button>
       </div>
     </div>
-    -->
+  </header>
 
-    <div class="empty-state">
-      No items currently displayed. Add your cards above using the template format.
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Handmade Fabric & Textile Art</h1>
+    <p>Discover unique, original framed art pieces designed with meticulous fabric layered craftsmanship.</p>
+  </section>
+
+  <!-- Search & Toolbar -->
+  <div class="toolbar-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search artwork..." />
+    </div>
+    <div class="filter-options">
+      <select id="sortSelect">
+        <option value="featured">Sort by: Featured</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Main Gallery Container -->
+  <main>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- 
+        ALL PREVIOUS GALLERY CARDS HAVE BEEN REMOVED.
+        
+        To add new cards, paste them in this format:
+        <div class="product-card">
+          <div class="frame-wrapper">
+            <img src="images/your-art.jpg" alt="Art Title">
+          </div>
+          <div class="card-info">
+            <h2 class="product-title">Art Title</h2>
+            <p class="product-price">(Price – ₹2,000 + GST)</p>
+            <button class="add-to-cart-btn">Inquire / Add to Cart</button>
+          </div>
+        </div>
+      -->
+
+      <!-- Empty State -->
+      <div class="empty-gallery">
+        <h3>Gallery is Ready</h3>
+        <p>Your previous image cards and details have been removed. Add your updated artwork items here.</p>
+      </div>
     </div>
   </main>
 
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="toggleCart(false)"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart-btn" onclick="toggleCart(false)">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p style="text-align: center; color: var(--text-muted); margin-top: 40px;">Your cart is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px; font-weight: 600;">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Artisan Originals. All rights reserved. Handcrafted original creations.</p>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    function toggleCart(isOpen) {
+      const drawer = document.getElementById('cartDrawer');
+      const overlay = document.getElementById('cartOverlay');
+      if (isOpen) {
+        drawer.classList.add('open');
+        overlay.classList.add('open');
+      } else {
+        drawer.classList.remove('open');
+        overlay.classList.remove('open');
+      }
+    }
+  </script>
 </body>
 </html>
