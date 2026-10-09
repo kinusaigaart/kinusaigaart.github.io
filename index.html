@@ -9,10 +9,9 @@
       --bg-color: #f7f5f0;
       --card-bg: #ffffff;
       --text-main: #1f1f1f;
-      --text-muted: #666666;
-      --frame-border: #141414;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      --accent: #222222;
+      --text-muted: #555555;
+      --frame-border: #111111;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
     * {
@@ -25,51 +24,38 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-main);
-      padding: 0 0 60px 0;
+      padding: 40px 20px;
     }
 
-    /* Top Navigation / Brand Header */
     header {
-      background-color: #ffffff;
-      border-bottom: 1px solid #e5e0d8;
-      padding: 36px 20px;
       text-align: center;
       margin-bottom: 40px;
     }
 
     header h1 {
       font-size: 2.2rem;
-      font-weight: 700;
       letter-spacing: -0.5px;
-      color: #111111;
       margin-bottom: 8px;
     }
 
     header p {
       color: var(--text-muted);
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
-    /* Main Container */
-    .container {
-      max-width: 1240px;
+    .gallery-container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Gallery Grid */
-    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 36px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
     }
 
-    /* Product Card */
-    .product-card {
+    .gallery-card {
       background: var(--card-bg);
       border-radius: 4px;
       box-shadow: var(--shadow);
-      padding: 24px 20px 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -77,19 +63,17 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .product-card:hover {
+    .gallery-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
     }
 
-    /* Framed Image Wrapper */
     .image-wrapper {
       position: relative;
       width: 100%;
       aspect-ratio: 1 / 1;
       background-color: #eae6df;
-      border: 14px solid var(--frame-border);
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+      border: 12px solid var(--frame-border);
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -104,34 +88,31 @@
       display: block;
     }
 
-    /* Details */
-    .product-info {
+    .card-details {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
     }
 
     .product-title {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 600;
-      color: #1a1a1a;
-      letter-spacing: -0.2px;
+      margin-bottom: 8px;
     }
 
     .product-price {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #222222;
+      color: var(--text-main);
     }
 
-    /* Footer */
-    footer {
+    .empty-state {
+      grid-column: 1 / -1;
       text-align: center;
-      margin-top: 60px;
-      font-size: 0.9rem;
+      padding: 60px 20px;
       color: var(--text-muted);
+      font-size: 1.1rem;
+      border: 2px dashed #d5d0c7;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -139,117 +120,28 @@
 
   <header>
     <h1>Product Gallery</h1>
-    <p>Handcrafted Art & Textile Collection</p>
+    <p>Handcrafted Art Collection</p>
   </header>
 
-  <main class="container">
-    <div class="gallery-grid">
+  <main class="gallery-container">
+    <!-- All previous images, titles, and prices have been cleared -->
+    
+    <!-- TEMPLATE ITEM (Uncomment and duplicate as needed):
+    <div class="gallery-card">
+      <div class="image-wrapper">
+        <img src="path/to/image.jpg" alt="Artwork Title" />
+      </div>
+      <div class="card-details">
+        <h2 class="product-title">Artwork Title</h2>
+        <p class="product-price">(Price – ₹0,000 + GST)</p>
+      </div>
+    </div>
+    -->
 
-      <!-- Item 1: Flame art -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Flame art.png" alt="Flame art" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Flame+Art'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Flame art</h2>
-          <p class="product-price">(Price – ₹2,000 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 2: Flower pot -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Flower pot.png" alt="Flower pot" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Flower+Pot'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Flower pot</h2>
-          <p class="product-price">(Price – ₹2,300 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 3: Gastric scanning -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Gastric Scan.png" alt="Gastric scanning" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Gastric+Scanning'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Gastric scanning</h2>
-          <p class="product-price">(Price – ₹2,500 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 4: Heart scanning -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Heart 2D ECHO.png" alt="Heart scanning (2D ECHO)" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Heart+Scanning'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Heart scanning (2D ECHO)</h2>
-          <p class="product-price">(Price – ₹2,500 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 5: Lung scan -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Lung scan.png" alt="Lung scan" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Lung+Scan'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Lung scan</h2>
-          <p class="product-price">(Price – ₹2,500 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 6: Beautiful star -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Star.png" alt="Beautiful star" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Beautiful+Star'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Beautiful star</h2>
-          <p class="product-price">(Price – ₹2,200 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 7: Sun rise 2 -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Sunrise 2.png" alt="Sun rise 2" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Sun+Rise+2'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Sun rise 2</h2>
-          <p class="product-price">(Price – ₹2,300 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 8: Sunrise -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="Sunrise.jpg" alt="Sunrise" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=Sunrise'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">Sunrise</h2>
-          <p class="product-price">(Price – ₹2,200 + GST)</p>
-        </div>
-      </article>
-
-      <!-- Item 9: The mind -->
-      <article class="product-card">
-        <div class="image-wrapper">
-          <img src="The mind.png" alt="The mind" onerror="this.src='https://placehold.co/600x600/eae6df/666666?text=The+Mind'" />
-        </div>
-        <div class="product-info">
-          <h2 class="product-title">The mind</h2>
-          <p class="product-price">(Price – ₹2,100 + GST)</p>
-        </div>
-      </article>
-
+    <div class="empty-state">
+      No items currently displayed. Add your cards above using the template format.
     </div>
   </main>
-
-  <footer>
-    <p>&copy; 2026 Art Gallery. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
