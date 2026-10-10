@@ -1,1652 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<title>Kinusaiga Art | Handmade, Creative & Affordable</title>
- 
-<!-- Tab Favicon: Royal Indigo & Champagne Gold 'K' -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='3' width='58' height='58' rx='16' fill='%23182b45' stroke='%23C29A38' stroke-width='4.5'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-size='40' font-weight='bold' fill='%23C29A38'%3EK%3C/text%3E%3C/svg%3E">
-<meta name="description" content="Authentic handmade Japanese Kinusaiga fabric artworks for gifting, home décor and special occasions.">
- 
-<link rel="canonical" href="https://kinusaigaart.in/">
- 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
- 
-<style>
-/* =========================================
-   COLOUR PALETTE
-========================================= */
-:root {
-    --bg-page: #F8FAFC;
-    --bg-surface: #FFFFFF;
-    --primary: #1E3A5F;
-    --primary-dark: #12253D;
-    --accent-gold: #C29A38;
-    --accent-gold-light: #FBF6EA;
-    --text-primary: #1D2530;
-    --text-secondary: #586575;
-    --border-soft: #E2E8F0;
-    --white: #FFFFFF;
-    --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
-    --shadow-md: 0 10px 30px rgba(30, 58, 95, 0.08);
-    --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
-}
- 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
-html {
-    scroll-behavior: smooth;
-}
- 
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: var(--bg-page);
-    color: var(--text-primary);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-}
- 
-h1, h2, h3, h4, .footer-brand {
-    font-family: 'Playfair Display', Georgia, serif;
-}
- 
-a {
-    text-decoration: none;
-    color: inherit;
-}
- 
-section {
-    padding: 85px 7%;
-}
- 
-/* =========================================
-   HEADER / NAVBAR
-========================================= */
-header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-soft);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
- 
-.navbar {
-    max-width: 1280px;
-    min-height: 80px;
-    margin: auto;
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
- 
-.brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
- 
-.brand-emblem {
-    width: 44px;
-    height: 44px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border: 2px solid var(--accent-gold);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-gold);
-    font-family: 'Cinzel', serif;
-    font-size: 20px;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
-}
- 
-.brand-text-block {
-    display: flex;
-    flex-direction: column;
-}
- 
-.brand-title {
-    font-family: 'Cinzel', serif;
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--primary);
-    line-height: 1.1;
-}
- 
-.brand-subtitle {
-    font-size: 10.5px;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: var(--accent-gold);
-    font-weight: 600;
-    margin-top: 2px;
-}
- 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
- 
-nav a {
-    color: var(--text-primary);
-    font-size: 14px;
-    font-weight: 600;
-    transition: color 0.25s ease;
-}
- 
-nav a:hover {
-    color: var(--accent-gold);
-}
- 
-/* =========================================
-   HERO / HOME
-========================================= */
-#home {
-    min-height: 680px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 75px 5%;
-    background: 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinusaiga Art | Handmade, Creative & Affordable</title>
+  <meta name="description" content="Authentic handmade Japanese Kinusaiga fabric artworks for gifting, home décor and special occasions. Founded by Dr. Akshay Shetti.">
+  <link rel="canonical" href="https://kinusaigaart.in/">
+
+  <!-- Tab Favicon: K Emblem -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='3' width='58' height='58' rx='16' fill='%23182b45' stroke='%23C29A38' stroke-width='4.5'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-size='40' font-weight='bold' fill='%23C29A38'%3EK%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --primary: #1E3A5F;
+      --primary-dark: #12253D;
+      --accent-gold: #C29A38;
+      --accent-gold-light: #FBF6EA;
+      --text-primary: #1D2530;
+      --text-secondary: #586575;
+      --border-soft: #E2E8F0;
+      --white: #FFFFFF;
+      --shadow-sm: 0 4px 16px rgba(30, 58, 95, 0.05);
+      --shadow-md: 0 10px 30px rgba(30, 58, 95, 0.08);
+      --shadow-lg: 0 16px 40px rgba(30, 58, 95, 0.16);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .footer-brand {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 85px 7%;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1280px;
+      min-height: 80px;
+      margin: auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-emblem {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border: 2px solid var(--accent-gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(30, 58, 95, 0.15);
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 10.5px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* HERO */
+    #home {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 75px 5%;
+      background: 
         radial-gradient(circle at 10% 20%, rgba(194, 154, 56, 0.10), transparent 30%),
         radial-gradient(circle at 90% 25%, rgba(30, 58, 95, 0.08), transparent 30%),
         var(--bg-page);
-}
- 
-.hero-wrapper {
-    max-width: 1240px;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 250px 1fr 250px;
-    align-items: center;
-    gap: 32px;
-}
- 
-.hero-center {
-    text-align: center;
-}
- 
-.hero-pill {
-    display: inline-block;
-    padding: 6px 18px;
-    background: var(--accent-gold-light);
-    border: 1px solid rgba(194, 154, 56, 0.35);
-    border-radius: 30px;
-    color: #8C6A1B;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-}
- 
-.main-brand-title {
-    font-family: 'Cinzel', serif;
-    font-size: 50px;
-    letter-spacing: 6px;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 6px;
-}
- 
-.brand-tagline {
-    color: var(--accent-gold);
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
- 
-.hero-center h1 {
-    font-size: 34px;
-    color: var(--primary-dark);
-    margin-bottom: 14px;
-    font-weight: 600;
-    letter-spacing: -0.3px;
-}
- 
-.hero-center h1::after {
-    content: "";
-    display: block;
-    width: 65px;
-    height: 3px;
-    background: var(--accent-gold);
-    margin: 14px auto 0;
-    border-radius: 4px;
-}
- 
-.hero-center p {
-    max-width: 580px;
-    margin: 20px auto;
-    font-size: 16.5px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
- 
-.buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
- 
-.btn {
-    display: inline-block;
-    padding: 13px 32px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-}
- 
-.btn-primary {
-    background: var(--primary);
-    color: var(--white);
-    border: 2px solid var(--primary);
-    box-shadow: 0 6px 18px rgba(30, 58, 95, 0.22);
-}
- 
-.btn-primary:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    transform: translateY(-2px);
-}
- 
-.btn-secondary {
-    background: var(--white);
-    color: var(--primary);
-    border: 2px solid var(--border-soft);
-}
- 
-.btn-secondary:hover {
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
-    transform: translateY(-2px);
-}
- 
-/* Side Cards */
-.hero-side {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
- 
-.side-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-soft);
-    border-radius: 18px;
-    padding: 22px 18px;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-    text-align: left;
-}
- 
-.side-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-gold);
-    box-shadow: var(--shadow-md);
-}
- 
-.side-card-icon {
-    font-size: 26px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
- 
-.side-card h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--primary);
-    margin-bottom: 6px;
-}
- 
-.side-card p {
-    font-size: 13.5px;
-    color: var(--text-secondary);
-    line-height: 1.55;
-}
- 
-/* =========================================
-   SECTION TITLES
-========================================= */
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
- 
-.section-title h2 {
-    font-size: 36px;
-    color: var(--primary);
-    margin-bottom: 8px;
-}
- 
-.section-title p {
-    color: var(--text-secondary);
-    font-size: 16.5px;
-}
- 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 55px;
-    height: 3px;
-    background: var(--accent-gold);
-    margin: 14px auto 0;
-    border-radius: 4px;
-}
- 
-/* =========================================
-   NEW ARRIVALS SECTION
-========================================= */
-#new-arrivals {
-    background: var(--bg-page);
-}
- 
-.new-arrival-banner {
-    max-width: 900px;
-    margin: 0 auto 40px;
-    background: var(--bg-surface);
-    border: 1px dashed var(--accent-gold);
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-}
- 
-.new-arrival-banner h3 {
-    color: var(--primary);
-    font-size: 22px;
-    margin-bottom: 8px;
-}
- 
-.new-arrival-banner p {
-    color: var(--text-secondary);
-    font-size: 15px;
-}
- 
-/* =========================================
-   GALLERY (STORE / SALE READY)
-========================================= */
-#gallery {
-    background: #F1F5F9;
-}
- 
-.gallery-grid {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
- 
-.gallery-card {
-    background: var(--bg-surface);
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-}
- 
-.gallery-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent-gold);
-    box-shadow: var(--shadow-md);
-}
- 
-.gallery-image-container {
-    height: 270px;
-    width: 100%;
-    background: #EAEFF5;
-    position: relative;
-    overflow: hidden;
-}
- 
-.gallery-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-}
- 
-.gallery-card:hover .gallery-image-container img {
-    transform: scale(1.05);
-}
- 
-.art-tag {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(30, 58, 95, 0.9);
-    color: var(--accent-gold);
-    font-size: 12px;
-    font-weight: 700;
-    padding: 5px 14px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
- 
-.art-tag.sold-out {
-    background: rgba(22, 38, 62, 0.95);
-    color: #F87171;
-    border: 1px solid rgba(248, 113, 113, 0.4);
-}
- 
-.gallery-card-content {
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
- 
-.gallery-card h3 {
-    color: var(--primary);
-    margin-bottom: 6px;
-    font-size: 20px;
-}
- 
-.art-meta {
-    font-size: 13px;
-    color: #8C6A1B;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
- 
-.gallery-card p {
-    color: var(--text-secondary);
-    font-size: 14px;
-    line-height: 1.55;
-    margin-bottom: 18px;
-    flex-grow: 1;
-}
- 
-.card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 14px;
-    border-top: 1px solid var(--border-soft);
-}
- 
-.price-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
- 
-.art-price {
-    font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.1;
-}
+    }
 
-.gst-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 11.5px;
-    font-weight: 600;
-    color: #8C6A1B;
-    margin-top: 2px;
-    letter-spacing: 0.3px;
-}
- 
-.btn-buy {
-    background: #25D366;
-    color: white;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 9px 18px;
-    border-radius: 24px;
-    transition: all 0.25s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
- 
-.btn-buy:hover {
-    background: #1DA851;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
-}
- 
-/* =========================================
-   TESTIMONIALS SECTION
-========================================= */
-#testimonials {
-    background: var(--bg-page);
-}
- 
-.testimonials-grid {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
- 
-.testimonial-card {
-    background: var(--bg-surface);
-    border-radius: 20px;
-    padding: 34px 28px;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
- 
-.testimonial-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent-gold);
-    box-shadow: var(--shadow-md);
-}
- 
-.stars {
-    color: #E5A93B;
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-}
- 
-.testimonial-text {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 22px;
-    font-style: italic;
-}
- 
-.client-info {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    border-top: 1px solid var(--border-soft);
-    padding-top: 16px;
-}
- 
-.client-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--accent-gold));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 17px;
-    flex-shrink: 0;
-}
- 
-.client-details h4 {
-    font-size: 16px;
-    color: var(--primary);
-    margin-bottom: 2px;
-}
- 
-.client-details span {
-    font-size: 12.5px;
-    color: #8C6A1B;
-    font-weight: 600;
-}
- 
-.share-review-box {
-    text-align: center;
-    margin-top: 45px;
-}
- 
-.btn-review {
-    display: inline-block;
-    padding: 12px 28px;
-    background: var(--bg-surface);
-    color: var(--primary);
-    border: 1.5px solid var(--accent-gold);
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 14.5px;
-    transition: all 0.3s ease;
-}
- 
-.btn-review:hover {
-    background: var(--accent-gold);
-    color: white;
-    transform: translateY(-2px);
-}
- 
-/* =========================================
-   HOW TO ORDER & PAYMENT DETAILS
-========================================= */
-#payment {
-    background: #F1F5F9;
-}
- 
-.payment-container {
-    max-width: 1050px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: stretch;
-}
- 
-.order-steps {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-soft);
-    border-radius: 20px;
-    padding: 36px 30px;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
- 
-.order-steps h3 {
-    color: var(--primary);
-    font-size: 24px;
-    margin-bottom: 22px;
-}
- 
-.step-item {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 20px;
-}
- 
-.step-item:last-child {
-    margin-bottom: 0;
-}
- 
-.step-num {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--accent-gold-light);
-    color: #8C6A1B;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
- 
-.step-text h4 {
-    font-size: 16px;
-    color: var(--primary);
-    margin-bottom: 4px;
-}
- 
-.step-text p {
-    font-size: 14px;
-    color: var(--text-secondary);
-}
- 
-.payment-card {
-    background: linear-gradient(135deg, #182C47 0%, #0F1E31 100%);
-    border: 1px solid rgba(194, 154, 56, 0.3);
-    border-radius: 22px;
-    padding: 38px 30px;
-    color: white;
-    box-shadow: var(--shadow-lg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
- 
-.payment-card h3 {
-    color: var(--accent-gold);
-    font-size: 24px;
-    margin-bottom: 8px;
-    text-align: center;
-}
- 
-.payment-card p.subtitle {
-    color: #D6E0EA;
-    font-size: 14px;
-    margin-bottom: 24px;
-    text-align: center;
-}
- 
-.upi-highlight-box {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1.5px dashed var(--accent-gold);
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 22px;
-}
- 
-.upi-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent-gold);
-    font-weight: 700;
-    margin-bottom: 8px;
-}
- 
-.upi-id-value {
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: 700;
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.25);
-    padding: 8px 16px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
-}
- 
-.btn-copy-upi {
-    display: inline-block;
-    background: var(--accent-gold);
-    color: #12253D;
-    font-size: 12.5px;
-    font-weight: 700;
-    padding: 6px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.25s ease;
-}
- 
-.btn-copy-upi:hover {
-    background: #E5B445;
-    transform: translateY(-2px);
-}
- 
-.bank-details-box {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 16px 20px;
-    font-size: 14px;
-    text-align: center;
-}
- 
-.coming-soon-badge {
-    display: inline-block;
-    background: rgba(194, 154, 56, 0.2);
-    color: var(--accent-gold);
-    border: 1px solid var(--accent-gold);
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 6px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
- 
-/* =========================================
-   OUR STORY
-========================================= */
-#story {
-    background: var(--bg-page);
-}
- 
-.story-content {
-    max-width: 820px;
-    margin: auto;
-    text-align: center;
-    background: var(--bg-surface);
-    padding: 44px 38px;
-    border-radius: 20px;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-sm);
-}
- 
-.story-content p {
-    margin-bottom: 18px;
-    font-size: 17px;
-    color: var(--text-primary);
-    line-height: 1.85;
-}
- 
-.story-content p:last-child {
-    margin-bottom: 0;
-}
- 
-/* =========================================
-   WHY US
-========================================= */
-#features {
-    background: #F1F5F9;
-}
- 
-.features-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
- 
-.feature-card {
-    background: var(--bg-surface);
-    padding: 38px 26px;
-    text-align: center;
-    border-radius: 18px;
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-}
- 
-.feature-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent-gold);
-    box-shadow: var(--shadow-md);
-}
- 
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    background: var(--accent-gold-light);
-    color: var(--accent-gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    border: 1px solid rgba(194, 154, 56, 0.35);
-}
- 
-.feature-card h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-    font-size: 20px;
-}
- 
-.feature-card p {
-    color: var(--text-secondary);
-    font-size: 14.5px;
-}
- 
-/* =========================================
-   CUSTOM ORDERS
-========================================= */
-#custom {
-    background: var(--bg-page);
-}
- 
-.custom-box {
-    max-width: 950px;
-    margin: auto;
-    padding: 60px 40px;
-    text-align: center;
-    background: linear-gradient(135deg, #182C47 0%, #0F1E31 100%);
-    color: var(--white);
-    border-radius: 22px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(194, 154, 56, 0.25);
-}
- 
-.custom-box h2 {
-    font-size: 36px;
-    margin-bottom: 16px;
-    color: var(--accent-gold);
-}
- 
-.custom-box p {
-    max-width: 680px;
-    margin: auto;
-    color: #D6E0EA;
-    font-size: 16.5px;
-    line-height: 1.8;
-}
- 
-.custom-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 34px;
-    background: linear-gradient(135deg, #C29A38, #A37E22);
-    color: #FFFFFF;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 15px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    transition: all 0.3s ease;
-}
- 
-.custom-button:hover {
-    background: linear-gradient(135deg, #D4AA44, #B88E28);
-    transform: translateY(-2px);
-}
- 
-/* =========================================
-   CONTACT
-========================================= */
-#contact {
-    background: #F1F5F9;
-    text-align: center;
-}
- 
-.contact-content {
-    max-width: 650px;
-    margin: auto;
-}
- 
-.contact-content p {
-    color: var(--text-secondary);
-    font-size: 16.5px;
-    margin-bottom: 22px;
-}
- 
-.whatsapp-button {
-    display: inline-block;
-    padding: 13px 32px;
-    background: #25D366;
-    color: white;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 15px;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
-    transition: all 0.3s ease;
-}
- 
-.whatsapp-button:hover {
-    background: #20BA5A;
-    transform: translateY(-2px);
-}
- 
-/* =========================================
-   FOOTER & VISITOR BADGE
-========================================= */
-footer {
-    background: #0E1724;
-    color: #D6DEE8;
-    text-align: center;
-    padding: 48px 20px 34px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
- 
-footer p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #8C9BAE;
-}
- 
-.footer-brand {
-    font-family: 'Cinzel', serif;
-    color: var(--accent-gold);
-    font-size: 22px;
-    letter-spacing: 3px;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
- 
-.counter-wrapper {
-    text-align: center;
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
- 
-.counter-wrapper p {
-    font-size: 12px;
-    color: #8C9BAE;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
- 
-/* =========================================
-   RESPONSIVENESS
-========================================= */
-@media (max-width: 1040px) {
     .hero-wrapper {
-        grid-template-columns: 1fr;
-        gap: 36px;
+      max-width: 1240px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 250px 1fr 250px;
+      align-items: center;
+      gap: 32px;
     }
- 
-    .hero-side {
-        flex-direction: row;
-        justify-content: center;
-    }
- 
-    .side-card {
-        flex: 1;
-        max-width: 320px;
-    }
- 
-    .payment-container {
-        grid-template-columns: 1fr;
-    }
- 
-    .testimonials-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
- 
-@media (max-width: 850px) {
-    .navbar {
-        padding: 15px 25px;
-        flex-direction: column;
-    }
- 
-    nav {
-        flex-wrap: wrap;
-        gap: 14px;
-    }
- 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
- 
-    .features-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
- 
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-}
- 
-@media (max-width: 650px) {
-    section {
-        padding: 60px 6%;
-    }
- 
-    #home {
-        padding: 50px 6%;
-    }
- 
-    .hero-side {
-        flex-direction: column;
-        align-items: center;
-    }
- 
-    .side-card {
-        width: 100%;
-        max-width: 100%;
-    }
- 
-    .main-brand-title {
-        font-size: 34px;
-        letter-spacing: 4px;
-    }
- 
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
- 
-    .upi-id-value {
-        font-size: 17px;
-    }
-}
-</style>
-</head>
- 
-<body>
- 
-<!-- NAVIGATION -->
-<header>
-    <div class="navbar">
-        <a href="#home" class="brand-logo">
-            <div class="brand-emblem">K</div>
-            <div class="brand-text-block">
-                <span class="brand-title">KINUSAIGA ART</span>
-                <span class="brand-subtitle">Handmade Studio</span>
-            </div>
-        </a>
- 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#new-arrivals">New Arrival</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#testimonials">Reviews</a>
-            <a href="#payment">How to Buy</a>
-            <a href="#story">Our Story</a>
-            <a href="#custom">Custom Orders</a>
-            <a href="#contact">Contact</a>
-            <a href="refund-policy.html">Refund and Return Policy</a>
-        </nav>
-    </div>
-</header>
- 
-<!-- HERO -->
-<section id="home">
-    <div class="hero-wrapper">
-        <div class="hero-side hero-side-left">
-            <div class="side-card">
-                <span class="side-card-icon">🌸</span>
-                <h4>Kinusaiga Art</h4>
-                <p>Traditional Japanese textile art created by tucking fabric into carved wood.</p>
-            </div>
-            <div class="side-card">
-                <span class="side-card-icon">🧵</span>
-                <h4>100% Handcrafted</h4>
-                <p>Every single piece is made stitchless, with patience, precision & passion.</p>
-            </div>
-        </div>
- 
-        <div class="hero-center">
-            <div class="hero-pill">Handcrafted Japanese Fabric Art</div>
-            <div class="main-brand-title">KINUSAIGA ART</div>
-            <div class="brand-tagline">Handmade • Creative • Unique</div>
- 
-            <h1>Beautiful Art, Made Affordable</h1>
- 
-            <p>
-                Discover beautiful handmade Kinusaiga art created with
-                creativity, patience and attention to detail. We create
-                innovative, attractive and cost-effective artworks for
-                gifting, home décor and special occasions.
-            </p>
- 
-            <div class="buttons">
-                <a href="#gallery" class="btn btn-primary">Browse & Buy Art</a>
-                <a href="#custom" class="btn btn-secondary">Custom Orders</a>
-            </div>
-        </div>
- 
-        <div class="hero-side hero-side-right">
-            <div class="side-card">
-                <span class="side-card-icon">🎁</span>
-                <h4>Bespoke Gifting</h4>
-                <p>Unforgettable memorable gifts tailored for weddings, birthdays & celebrations.</p>
-            </div>
-            <div class="side-card">
-                <span class="side-card-icon">✦</span>
-                <h4>Direct Studio Sale</h4>
-                <p>Buy authentic handcrafted pieces directly from the artist with doorstep delivery.</p>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<!-- NEW ARRIVALS -->
-<section id="new-arrivals">
-    <div class="section-title">
-        <h2>New Arrivals</h2>
-        <p>Fresh additions from our studio workshop</p>
-    </div>
- 
-    <div class="new-arrival-banner">
-        <h3>✨ New Collection Dropping Soon</h3>
-        <p>Our upcoming creations are currently on the craft table. Stay connected on WhatsApp to get exclusive early previews and custom reservation options.</p>
-        <div style="margin-top: 20px;">
-            <a href="https://wa.me/917507807673?text=Hello%2C%20I%20want%20to%20get%20early%20updates%20on%20New%20Arrivals" target="_blank" class="btn btn-primary">
-                Get New Arrival Alerts on WhatsApp
-            </a>
-        </div>
-    </div>
-</section>
 
-<!-- GALLERY & SHOP -->
-<section id="gallery">
-    <div class="section-title">
-        <h2>Gallery & Featured Artworks</h2>
-        <p>Original handmade fabric art. Contact to request similar re-creations or custom commissions.</p>
-    </div>
- 
-    <div class="gallery-grid">
-        <!-- Artwork 1: 2D ECHO -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="2D ECHO.jpg" alt="2D ECHO Kinusaiga Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>2D ECHO</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Hand-tucked Japanese textile creation with subtle concentric layers and elegant texture.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,100</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%202D%20ECHO%20Kinusaiga%20Art%20(Rs.2100%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 2: Flame Art -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="Flame Art.png" alt="Flame Art Kinusaiga">
-            </div>
-            <div class="gallery-card-content">
-                <h3>Flame Art</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Vibrant fire motif woven with warm silk fabrics, highlighting depth and radiant energy.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,450</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Flame%20Art%20Kinusaiga%20Art%20(Rs.2450%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 3: Flower -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="Flower.jpg" alt="Flower Fabric Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>Flower</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Graceful botanical blossom created using hand-tucked fabric contours and floral shades.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,200</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Flower%20Kinusaiga%20Art%20(Rs.2200%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 4: Gastric Scan -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="Gastric Scan.jpg" alt="Gastric Scan Fabric Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>Gastric Scan</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Unique artistic interpretation capturing intricate internal forms with fine silk textiles.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,350</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Gastric%20Scan%20Kinusaiga%20Art%20(Rs.2350%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 5: Lung Scan -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="Lung Scan.jpg" alt="Lung Scan Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>Lung Scan</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Detailed anatomical abstraction handcrafted with delicate fabric inlays and gradients.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,300</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Lung%20Scan%20Kinusaiga%20Art%20(Rs.2300%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 6: Sunrise 1 -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="Sunrise 1.jpg" alt="Sunrise 1 Fabric Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>Sunrise 1</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Warm morning landscape composed with shimmering gold and pastel fabric textures.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,250</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Sunrise%201%20Kinusaiga%20Art%20(Rs.2250%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 7: Sunrise 2 -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="Sunrise 2.jpg" alt="Sunrise 2 Fabric Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>Sunrise 2</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Radiant dawn composition crafted with vivid fabric contrast and horizon details.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,400</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20the%20Sunrise%202%20Kinusaiga%20Art%20(Rs.2400%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 8: The mind -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="The mind.png" alt="The Mind Kinusaiga Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>The Mind</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Thought-provoking conceptual design created through fine stitchless Japanese fabric inlays.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,500</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20The%20Mind%20Kinusaiga%20Art%20(Rs.2500%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Artwork 9: The star -->
-        <div class="gallery-card">
-            <div class="gallery-image-container">
-                <span class="art-tag sold-out">Sold Out</span>
-                <img src="The star.jpg" alt="The Star Kinusaiga Art">
-            </div>
-            <div class="gallery-card-content">
-                <h3>The Star</h3>
-                <div class="art-meta">Size: 6" x 6" • Wall Hanging Facility</div>
-                <p>Celestial star motif crafted using deep tones contrasted with radiant champagne fabric.</p>
-                <div class="card-footer">
-                    <div class="price-block">
-                        <span class="art-price">₹2,150</span>
-                        <span class="gst-text">+18% GST</span>
-                    </div>
-                    <a href="https://wa.me/917507807673?text=Hello%2C%20I%20am%20interested%20in%20a%20re-creation%20of%20The%20Star%20Kinusaiga%20Art%20(Rs.2150%20%2B18%25%20GST)" target="_blank" class="btn-buy">
-                        Order Similar ➔
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<!-- TESTIMONIALS SECTION -->
-<section id="testimonials">
-    <div class="section-title">
-        <h2>Customer Testimonials</h2>
-        <p>Kind words from art lovers and collectors across India</p>
-    </div>
- 
-    <div class="testimonials-grid">
-        <div class="testimonial-card">
-            <div>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-                    "I ordered a custom floral Kinusaiga piece for my parents' anniversary. The fabric layering and texture look breathtaking in person. It feels so unique compared to regular paintings!"
-                </p>
-            </div>
-            <div class="client-info">
-                <div class="client-avatar">P</div>
-                <div class="client-details">
-                    <h4>Pooja Sharma</h4>
-                    <span>Verified Buyer • Bengaluru</span>
-                </div>
-            </div>
-        </div>
- 
-        <div class="testimonial-card">
-            <div>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-                    "The craftmanship exceeded all my expectations. The fabrics are flawless, neatly packed, and arrived on time. Highly recommended for premium home décor."
-                </p>
-            </div>
-            <div class="client-info">
-                <div class="client-avatar">R</div>
-                <div class="client-details">
-                    <h4>Rajesh Venkat</h4>
-                    <span>Verified Collector • Chennai</span>
-                </div>
-            </div>
-        </div>
- 
-        <div class="testimonial-card">
-            <div>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-                    "Directly ordering on WhatsApp was so smooth and transparent. It's rare to find authentic Japanese Kinusaiga artwork made with such care and reasonable pricing."
-                </p>
-            </div>
-            <div class="client-info">
-                <div class="client-avatar">A</div>
-                <div class="client-details">
-                    <h4>Ananya Deshmukh</h4>
-                    <span>Verified Buyer • Pune</span>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <div class="share-review-box">
-        <a href="https://wa.me/917507807673?text=Hello%2C%20I%20would%20like%20to%20share%20a%20review%20for%20my%20Kinusaiga%20artwork" target="_blank" class="btn-review">
-            ✍️ Share Your Review on WhatsApp
-        </a>
-    </div>
-</section>
- 
-<!-- HOW TO ORDER & PAYMENT DETAILS -->
-<section id="payment">
-    <div class="section-title">
-        <h2>How to Order & Payment</h2>
-        <p>Simple, secure and transparent ordering direct from the artist</p>
-    </div>
- 
-    <div class="payment-container">
-        <!-- 3 Simple Steps -->
-        <div class="order-steps">
-            <h3>Ordering in 3 Simple Steps</h3>
-             
-            <div class="step-item">
-                <div class="step-num">1</div>
-                <div class="step-text">
-                    <h4>Choose Your Artwork</h4>
-                    <p>Browse our gallery and click on WhatsApp to confirm piece availability, custom reproduction, or shipping details.</p>
-                </div>
-            </div>
- 
-            <div class="step-item">
-                <div class="step-num">2</div>
-                <div class="step-text">
-                    <h4>Make Payment via UPI</h4>
-                    <p>Transfer using any UPI app (GPay, PhonePe, Paytm, BHIM) to our registered UPI ID.</p>
-                </div>
-            </div>
- 
-            <div class="step-item">
-                <div class="step-num">3</div>
-                <div class="step-text">
-                    <h4>Share Screenshot & Receive Art</h4>
-                    <p>Send your payment confirmation and full delivery address on WhatsApp. Your piece will be safely packed & shipped.</p>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Payment Card -->
-        <div class="payment-card">
-            <h3>Direct UPI Payment</h3>
-            <p class="subtitle">Pay conveniently with Google Pay, PhonePe, Paytm, or any UPI app</p>
- 
-            <div class="upi-highlight-box">
-                <div class="upi-label">Official Studio UPI ID</div>
-                <div class="upi-id-value" id="upiText">aksnsdrhuf@kotak</div>
-                <div>
-                    <button class="btn-copy-upi" onclick="copyUPI()">📋 Copy UPI ID</button>
-                </div>
-            </div>
- 
-            <div class="bank-details-box">
-                <p style="color: #E2E8F0; font-size: 14px; margin-bottom: 4px;">Direct Bank Account (NEFT / IMPS)</p>
-                <div class="coming-soon-badge">Details Coming Soon</div>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<!-- OUR STORY -->
-<section id="story">
-    <div class="section-title">
-        <h2>Our Brand Story</h2>
-        <p>Art created with imagination and heart</p>
-    </div>
- 
-    <div class="story-content">
-        <p>
-            Kinusaiga Art is inspired by the beauty of handmade
-            craftsmanship and the endless possibilities of fabric.
-        </p>
-        <p>
-            Every artwork is carefully designed and created by hand,
-            turning simple materials into beautiful decorative pieces.
-        </p>
-        <p>
-            Our aim is to make creative and attractive Kinusaiga art
-            accessible to everyone without compromising on the joy
-            of handmade artistry.
-        </p>
-        <p>
-            Whether it is a gift, a home decoration or a personalised
-            creation, we believe that every piece should have its own story.
-        </p>
-    </div>
-</section>
- 
-<!-- WHY US -->
-<section id="features">
-    <div class="section-title">
-        <h2>Why Choose Us?</h2>
-        <p>Handmade with creativity, care and attention to detail</p>
-    </div>
- 
-    <div class="features-grid">
-        <div class="feature-card">
-            <div class="feature-icon">✦</div>
-            <h3>Handmade</h3>
-            <p>Each artwork is carefully created by hand with patience and attention to detail.</p>
-        </div>
- 
-        <div class="feature-card">
-            <div class="feature-icon">♡</div>
-            <h3>Unique Designs</h3>
-            <p>Creative designs that make every artwork special and different.</p>
-        </div>
- 
-        <div class="feature-card">
-            <div class="feature-icon">◆</div>
-            <h3>Affordable</h3>
-            <p>Beautiful handmade art at a cost that makes creative gifting accessible.</p>
-        </div>
-    </div>
-</section>
- 
-<!-- CUSTOM ORDERS -->
-<section id="custom">
-    <div class="custom-box">
-        <h2>Create Something Special</h2>
-        <p>
-            Looking for a unique gift or a special artwork?
-            We provide customized Kinusaiga art based on your
-            requirements, theme, occasion or personal idea.
-        </p>
-        <a href="https://wa.me/917507807673?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20custom%20order" target="_blank" class="custom-button">
-            Discuss Your Custom Order
-        </a>
-    </div>
-</section>
- 
-<!-- CONTACT -->
-<section id="contact">
-    <div class="section-title">
-        <h2>Get In Touch</h2>
-        <p>Let us create something beautiful for you</p>
-    </div>
- 
-    <div class="contact-content">
-        <p>
-            For artwork enquiries, gifting requirements,
-            custom orders and collaborations, contact us directly.
-        </p>
-        <a href="https://wa.me/917507807673" target="_blank" class="whatsapp-button">
-            Chat With Us on WhatsApp
-        </a>
-    </div>
-</section>
- 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-brand">KINUSAIGA ART</div>
-    <p>Handmade • Creative • Unique</p>
-    <p>© 2026 Kinusaiga Art. All Rights Reserved.</p>
- 
-    <!-- Visitor Counter -->
-    <div class="counter-wrapper">
-        <p>Total Visitors</p>
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=kinusaigaart.in" alt="Visitor Count" />
-    </div>
-</footer>
- 
-<!-- Copy UPI Script -->
-<script>
-function copyUPI() {
-    const upi = document.getElementById("upiText").innerText;
-    navigator.clipboard.writeText(upi).then(() => {
-        const btn = document.querySelector(".btn-copy-upi");
-        btn.innerText = "✓ Copied to Clipboard!";
-        setTimeout(() => {
-            btn.innerText = "📋 Copy UPI ID";
-        }, 2500);
-    });
-}
-</script>
- 
-</body>
-</html>
+    .hero-center {
+      text-align: center;
+    }
+
+    /* COMPANY LOGO */
+    .company-logo-container {
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .company-logo-img {
+      width: 175px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .company-logo-img:hover {
+      transform: scale(1.03);
+    }
+
+    .hero-pill {
+      display: inline-block;
+      padding: 6px 18px;
+      background: var(--accent-gold-light);
+      border: 1px solid rgba(194, 154, 56, 0.35);
+      border-radius: 30px;
+      color: #8C6A1B;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .main-brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 50px;
+      letter-spacing: 6px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .brand-tagline {
+      color: var(--accent-gold);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-center h1 {
+      font-size: 34px;
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .hero-center h1::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 3px;
+      background: var(--accent-gold);
+      margin: 14px auto 0;
+      border-radius: 4px;
+    }
+
+    .hero-center p {
+      max-width: 580px;
+      margin: 20px auto;
+      font-size: 16.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 32px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+      box-shadow: 0 6px 18px rgba(30, 58, 95, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--border-soft);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      transform: translateY(-2px);
+    }
+
+    /* SIDE CARDS */
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .side-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 22px 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+
+    .side-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .side-card-icon {
+      font-size: 26px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .side-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .side-card p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* SECTION TITLES */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--text-secondary);
+      font-size: 16.5px;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 3px;
+      background: var(--accent-gold);
+      margin: 14px auto 0;
+      border-radius: 4px;
+    }
+
+    /* NEW ARRIVALS */
+    #new-arrivals {
+      background: var(--bg-page);
+    }
+
+    .new-arrival-banner {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: var(--bg-surface);
+      border: 1px dashed var(--accent-gold);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .new-arrival-banner h3 {
+      color: var(--primary);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .new-arrival-banner p {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    /* GALLERY */
+    #gallery {
+      background: #F1F5F9;
+    }
+
+    .gallery-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .gallery-card {
+      background: var(--bg-surface);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-image-container {
+      height: 270px;
+      width: 100%;
+      background: #EAEFF5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover .gallery-image-container img {
+      transform: scale(1.05);
+    }
+
+    .art-tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(30, 58, 95, 0.9);
+      color: var(--accent-gold);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .art-tag.sold-out {
+      background: rgba(22, 38, 62, 0.95);
+      color: #F87171;
+      border: 1px solid rgba(248, 113, 113, 0.4);
+    }
+
+    .gallery-card-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .gallery-card h3 {
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-size: 20px;
+    }
+
+    .art-meta {
+      font-size: 13px;
+      color: #8C6A1B;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .gallery-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .price-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .art-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.1;
+    }
+
+    .gst-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #8C6A1B;
+      margin-top: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-buy {
+      background: #25D366;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 24px;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-buy:hover {
+      background: #1DA851;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    }
+
+    /* TESTIMONIALS */
+    #testimonials {
+      background: var(--bg-page);
+    }
+
+    .testimonials-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-surface);
+      border-radius: 20px;
+      padding: 34px 28px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .stars {
+      color: #E5A93B;
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 16px;
+    }
+
+    .client-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent-gold));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .client-details h4 {
+      font-size: 16px;
