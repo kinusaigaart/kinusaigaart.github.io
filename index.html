@@ -1194,17 +1194,14 @@ footer p {
         <p>Fresh additions from our studio workshop</p>
     </div>
 
-    <div class="gallery-grid" style="max-width: 420px; margin: auto;">
+   <div class="gallery-grid" style="max-width: 360px; margin: 0 auto; display: block;">
         <!-- New Arrival Artwork: Monsoon Magic -->
         <div class="gallery-card">
             <div class="gallery-image-container">
                 <span class="art-tag">New Arrival</span>
-                <picture>
-                    <source srcset="monsoon%20magic.jpg" type="image/jpeg">
-                    <source srcset="monsoon%20magic.jpeg" type="image/jpeg">
-                    <source srcset="monsoon%20magic.png" type="image/png">
-                    <img src="monsoon magic.jpg" alt="Monsoon Magic Kinusaiga Art">
-                </picture>
+                <img src="monsoon magic.jpg" 
+                     onerror="if(!this.t1){this.t1=1;this.src='monsoon%20magic.jpg';}else if(!this.t2){this.t2=1;this.src='monsoon%20magic.png';}else if(!this.t3){this.t3=1;this.src='monsoon%20magic.jpeg';}else if(!this.t4){this.t4=1;this.src='Monsoon%20magic.jpg';}else if(!this.t5){this.t5=1;this.src='Monsoon%20Magic.jpg';}" 
+                     alt="Monsoon Magic Kinusaiga Art">
             </div>
             <div class="gallery-card-content">
                 <h3>Monsoon Magic</h3>
